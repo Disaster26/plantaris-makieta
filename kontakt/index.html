@@ -345,6 +345,51 @@ form.fm .zgoda input{width:auto;margin-top:3px}
 }
 .ph-head .btn.o{color:#fff;border-color:#fff}
 .ph-head .btn.o:hover{background:#fff;color:var(--granat)}
+.gab .tl{font-size:15px;line-height:1.7;margin:0 0 16px}
+.gab .tl a{font-weight:600;text-decoration:none}
+.gab .btns .btn{padding-left:16px;padding-right:16px}
+/* opinie: przesuwany pas */
+.karuz{position:relative}
+.karuz .op{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 32px)/3);grid-template-columns:none;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:4px}
+.karuz .op::-webkit-scrollbar{display:none}
+.karuz .op figure{scroll-snap-align:start}
+.karuz-n{display:flex;gap:8px;justify-content:flex-end;margin-top:14px}
+.karuz-n button{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--granat);background:#fff;color:var(--granat);font-size:22px;line-height:1;cursor:pointer}
+.karuz-n button:hover{background:var(--granat);color:#fff}
+@media (max-width:860px){.karuz .op{grid-auto-columns:calc((100% - 16px)/2)}}
+@media (max-width:640px){.karuz .op{grid-auto-columns:86%}}
+/* wyróżnienia: zwarte karty */
+.wyr-k{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-top:18px}
+.wyr-k>div{border:1px solid var(--linia);border-radius:var(--r);overflow:hidden;background:#fff}
+.wyr-k .ph{border-radius:0;border-width:0 0 1.5px;min-height:0;font-size:12.5px;padding:10px}
+.wyr-k h3{font-size:16.5px;margin:12px 14px 4px}
+.wyr-k p{font-size:14px;color:var(--tekst2);margin:0 14px 14px}
+@media (max-width:1000px){.wyr-k{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:640px){.wyr-k{grid-template-columns:repeat(2,minmax(0,1fr))}.wyr-k h3{font-size:15px}.wyr-k p{font-size:13px}}
+/* partnerzy: same logotypy w przesuwającym się pasku */
+.pasek-l{overflow:hidden;margin-top:14px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.tasma{display:flex;gap:14px;width:max-content;animation:tasma 40s linear infinite}
+.pasek-l:hover .tasma{animation-play-state:paused}
+.lg{flex:0 0 150px;height:72px;display:flex;align-items:center;justify-content:center;text-align:center;border:1.5px dashed #8FA7C4;border-radius:12px;background:repeating-linear-gradient(135deg,#E9EFF6 0 14px,#E1E9F2 14px 28px);font-size:11.5px;line-height:1.3;color:#2E4A6B;padding:6px}
+@keyframes tasma{to{transform:translateX(calc(-50% - 7px))}}
+@media (prefers-reduced-motion:reduce){.tasma{animation:none;flex-wrap:wrap;width:auto}}
+/* cennik: rozwijane pozycje */
+details.cen-poz{display:block;padding:0}
+details.cen-poz>summary{display:grid;grid-template-columns:minmax(0,1fr) auto 24px;gap:16px;align-items:center;padding:15px 0;cursor:pointer;list-style:none}
+details.cen-poz>summary::-webkit-details-marker{display:none}
+details.cen-poz>summary h3{margin:0;font-size:17px}
+details.cen-poz>summary::after{content:"+";font:500 24px/1 Jost,Inter,sans-serif;color:var(--fuksja);text-align:center}
+details.cen-poz[open]>summary::after{content:"\2212"}
+details.cen-poz .roz{padding:0 40px 16px 0;font-size:15px;color:var(--tekst2)}
+details.cen-poz .roz p{margin:0 0 6px}
+details.cen-poz .roz .cz{font-size:14.5px}
+/* krócej: mniejsze zdjęcia w profilach i kafelkach gabinetów */
+.gab .ph.r169{aspect-ratio:21/9}
+.profil{grid-template-columns:minmax(0,300px) minmax(0,1fr);align-items:start}
+.profil.odw{grid-template-columns:minmax(0,1fr) minmax(0,300px)}
+@media (max-width:860px){.profil,.profil.odw{grid-template-columns:1fr}.profil .ph.r45{aspect-ratio:4/3}.metr{grid-template-columns:repeat(3,minmax(0,1fr))}.metr div{padding:8px;font-size:12.5px}}
+details.cen-poz>summary .c{grid-row:auto;white-space:nowrap}
+@media (max-width:640px){details.cen-poz>summary{grid-template-columns:minmax(0,1fr) auto 18px;gap:10px}details.cen-poz>summary h3{font-size:16px}details.cen-poz .roz{padding-right:0}}
 <style>
 .wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
 .wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
@@ -359,7 +404,7 @@ form.fm .zgoda input{width:auto;margin-top:3px}
 </style>
 </style></head><body>
 <div class="mk">Makieta układu strony. Pola w paski to miejsca na nowe zdjęcia, teksty oznaczone na żółto są do uzupełnienia.</div>
-<div class="top"><div class="w"><div class="tel"><a href="tel:+48503100341"><span>Agnieszka, podologia i dietetyka: </span>503 100 341</a><a href="tel:+48500138088"><span>Łukasz, diagnostyka i wkładki: </span>500 138 088</a></div>
+<div class="top"><div class="w"><div class="tel"><a href="tel:+48503100341"><span>Podologia i dietetyka: </span>503 100 341</a><a href="tel:+48500138088"><span>Diagnostyka i wkładki: </span>500 138 088</a></div>
 <div class="dod"><a href="../sklep/">Sklep</a><a href="../blog/">Blog</a><a href="mailto:kontakt@plantaris.pl">kontakt@plantaris.pl</a></div></div></div>
 <header class="hdr"><div class="w"><a class="logo" href="../" aria-label="PLANTARIS, strona główna"><img src="../logo.png" width="400" height="120" alt="PLANTARIS diagnostyka i terapia stóp"></a>
 <nav class="menu" id="menu" aria-label="Menu główne"><a href="../o-nas/">O nas</a><a href="../zabiegi/">Zabiegi</a><a href="../diagnostyka-stop/">Diagnostyka stóp</a><a href="../wkladki-ortopedyczne/">Wkładki</a><a href="../strefa-pacjenta/">Strefa pacjenta</a><a href="../szkolenia/">Szkolenia</a><a href="../cennik/">Cennik</a><a href="../kontakt/" class=akt aria-current=page>Kontakt</a><div class="dod-m"><a href="../sklep/">Sklep</a><a href="../blog/">Blog</a></div></nav>
@@ -367,37 +412,36 @@ form.fm .zgoda input{width:auto;margin-top:3px}
 <button class="burger" type="button" data-burger aria-controls="menu" aria-expanded="false" aria-label="Otwórz menu"><span></span></button></div></header>
 <main><section class="ph-head"><div class="w" style="display:block;padding:0"><nav class="okr" aria-label="Jesteś tutaj"><a href="../">Strona główna</a> / Kontakt</nav></div>
 <div class="w"><div><h1>Kontakt i rezerwacja</h1><p class="lead">Dwa gabinety, dwa numery do zapisów. Przyjmujemy według zapisów, wizyty po wcześniejszym umówieniu.</p><div class="btns"><a class="btn " href="../umow-wizyte/">Umów wizytę</a></div></div><div class="ph r32 c" role="img" aria-label="Miejsce na zdjęcie: recepcja lub wejście do gabinetu"><div><b>tu zdjęcie</b>recepcja lub wejście do gabinetu</div></div></div></section>
-<section class="sek"><div class="w"><div class="kont"><a href="tel:+48503100341"><span>Agnieszka Nowotnik: podologia i dietetyka</span><b>503 100 341</b></a><a href="tel:+48500138088"><span>Łukasz Trzepieciński: diagnostyka i wkładki</span><b>500 138 088</b></a></div>
+<section class="sek"><div class="w"><div class="kont"><a href="tel:+48503100341"><span>Podologia i dietetyka</span><b>503 100 341</b></a><a href="tel:+48500138088"><span>Diagnostyka i wkładki</span><b>500 138 088</b></a></div>
 <p>E-mail: <a href="mailto:kontakt@plantaris.pl">kontakt@plantaris.pl</a></p><div class="gab"><article><div class="ph r169" role="img" aria-label="Miejsce na zdjęcie: wejście lub wnętrze gabinetu w Tychach"><div><b>tu zdjęcie</b>wejście lub wnętrze gabinetu w Tychach</div></div><div class="tr"><h3>PLANTARIS Tychy</h3><p class="adr">ul. Gabrieli Zapolskiej 65B, 43-100 Tychy</p>
-<ul><li><a href="tel:+48503100341">503 100 341</a> Agnieszka, podologia i dietetyka</li><li><a href="tel:+48500138088">500 138 088</a> Łukasz, diagnostyka i wkładki</li></ul>
-<p class="godz">Godziny przyjęć: według zapisów, wizyty po wcześniejszym umówieniu.</p>
-<div class="ph r169" style="margin-bottom:16px"><div><b>tu mapa Google</b>ul. Gabrieli Zapolskiej 65B, 43-100 Tychy<small>ładowana dopiero po przewinięciu, żeby nie spowalniać strony</small></div></div>
-<div class="btns"><a class="btn o" href="https://www.google.com/maps/dir/?api=1&destination=Zapolskiej+65B+Tychy" target="_blank" rel="noopener">Wyznacz trasę</a><a class="btn" href="../umow-wizyte/">Umów wizytę</a><a class="btn n" href="../gabinet-tychy/">Poznaj gabinet</a></div></div></article><article><div class="ph r169" role="img" aria-label="Miejsce na zdjęcie: wejście lub wnętrze gabinetu w Woli"><div><b>tu zdjęcie</b>wejście lub wnętrze gabinetu w Woli</div></div><div class="tr"><h3>PLANTARIS Wola</h3><p class="adr">ul. Lipowa 7a, 43-225 Wola</p>
-<ul><li><a href="tel:+48503100341">503 100 341</a> Agnieszka, podologia i dietetyka</li><li><a href="tel:+48500138088">500 138 088</a> Łukasz, diagnostyka i wkładki</li></ul>
-<p class="godz">Godziny przyjęć: według zapisów, wizyty po wcześniejszym umówieniu.</p>
-<div class="ph r169" style="margin-bottom:16px"><div><b>tu mapa Google</b>ul. Lipowa 7a, 43-225 Wola<small>ładowana dopiero po przewinięciu, żeby nie spowalniać strony</small></div></div>
-<div class="btns"><a class="btn o" href="https://www.google.com/maps/dir/?api=1&destination=Lipowa+7a+Wola" target="_blank" rel="noopener">Wyznacz trasę</a><a class="btn" href="../umow-wizyte/">Umów wizytę</a><a class="btn n" href="../gabinet-wola/">Poznaj gabinet</a></div></div></article></div></div></section>
+<p class="godz">Tyskie Centrum Podologii i Projektowania Wkładek Ortopodologicznych. Wizyty po wcześniejszym umówieniu.</p>
+<p class="tl"><a href="tel:+48503100341">503 100 341</a> podologia i dietetyka<br><a href="tel:+48500138088">500 138 088</a> diagnostyka i wkładki</p>
+<div class="btns"><a class="btn n" href="../gabinet-tychy/">O gabinecie</a><a class="btn" href="../umow-wizyte/">Umów wizytę</a><a class="btn o" href="https://www.google.com/maps/dir/?api=1&destination=Zapolskiej+65B+Tychy" target="_blank" rel="noopener">Wyznacz trasę</a></div></div></article><article><div class="ph r169" role="img" aria-label="Miejsce na zdjęcie: wejście lub wnętrze gabinetu w Woli"><div><b>tu zdjęcie</b>wejście lub wnętrze gabinetu w Woli</div></div><div class="tr"><h3>PLANTARIS Wola</h3><p class="adr">ul. Lipowa 7a, 43-225 Wola</p>
+<p class="godz">Centrum Szkoleń, Rehabilitacji i Sprawnej Stopy. Wizyty po wcześniejszym umówieniu.</p>
+<p class="tl"><a href="tel:+48503100341">503 100 341</a> podologia i dietetyka<br><a href="tel:+48500138088">500 138 088</a> diagnostyka i wkładki</p>
+<div class="btns"><a class="btn n" href="../gabinet-wola/">O gabinecie</a><a class="btn" href="../umow-wizyte/">Umów wizytę</a><a class="btn o" href="https://www.google.com/maps/dir/?api=1&destination=Lipowa+7a+Wola" target="_blank" rel="noopener">Wyznacz trasę</a></div></div></article></div></div></section>
 <section class="sek sz" id="formularz"><div class="w dwa"><div><h2>Napisz do nas</h2><p>Odpowiadamy mailowo. Do wiadomości można dołączyć plik.</p>
 <div class="uwaga">Dokumentów dotyczących zdrowia (wyniki, zdjęcia zmian) prosimy nie dołączać tutaj. Służy do tego osobny formularz w <a href="../strefa-pacjenta/dokumenty/">strefie pacjenta</a>, przesyłany szyfrowanym połączeniem i widoczny tylko w panelu.</div></div>
 <div class="formbox"><form class="fm" data-demo><label>Imię<input required></label><label>E-mail<input type="email" required></label><label>Telefon<input type="tel"></label><label>Temat<select><option>Wizyta</option><option>Diagnostyka i wkładki</option><option>Szkolenia</option><option>Sklep</option><option>Aparaty USG</option></select></label><label class="cale">Wiadomość<textarea></textarea></label><label class="cale">Załącznik (opcjonalnie)<input type="file"></label><label class="zgoda cale"><input type="checkbox" required> Zgoda na przetwarzanie danych w celu odpowiedzi.</label><div class="cale"><button class="btn">Wyślij</button></div></form><div class="msg">Makieta: formularz nie wysyła wiadomości.</div></div></div></section>
-<section class="sek" id="opinia"><div class="w"><h2>Opinie</h2><div class="op"><figure><blockquote>Byłam na wizycie z 2 córkami. Mają wadę postawy i koślawość stóp. Pełen profesjonalizm, dokładność, troska o pacjenta, ogromna wiedza.</blockquote><figcaption><b>Katarzyna</b>, Łaziska Górne</figcaption></figure><figure><blockquote>Profesjonalnie przeprowadzona wizyta. Pani Agnieszka zadbała o pacjentkę, wyznaczyła tor leczenia, jakim będziemy się kierować.</blockquote><figcaption><b>Ag Niecha</b>, Tychy</figcaption></figure><figure><blockquote>Jestem bardzo zadowolona z usługi, pani Agnieszka ma super podejście do klienta. Wszystko dokładnie tłumaczy.</blockquote><figcaption><b>Barbara</b>, Zabrze</figcaption></figure></div>
+<section class="sek" id="opinia"><div class="w"><h2>Opinie</h2><div class="karuz"><div class="op" data-karuz><figure><blockquote>Profesjonalnie wykonana usługa, Pani Agnieszka bardzo miła, fachowo i zrozumiale opisuje „stan” stóp i zalecenia na przyszłość.</blockquote><figcaption><b>WaldiNie</b>, Jastrzębie-Zdrój</figcaption></figure><figure><blockquote>Bardzo rzetelny fachowiec, cieszę się, że trafiłam do takiego specjalisty.</blockquote><figcaption><b>Ada</b>, Tychy</figcaption></figure><figure><blockquote>Bardzo przyjazna i kompetentna osoba. Wyeliminowała podejrzewaną grzybicę i zaleciła odpowiednie badanie i wsparcie witaminowe. Po tygodniu stosowania witamin widać poprawę.</blockquote><figcaption><b>Klient</b></figcaption></figure><figure><blockquote>Jestem zadowolona, ulga po zabiegu.</blockquote><figcaption><b>Lidia</b>, Oświęcim</figcaption></figure><figure><blockquote>Profesjonalnie przeprowadzona wizyta. Pani Agnieszka zadbała o pacjentkę, wyznaczyła tor leczenia, jakim będziemy się kierować.</blockquote><figcaption><b>Ag Niecha</b>, Tychy</figcaption></figure><figure><blockquote>Kompetencja, kontakt i zaangażowanie godne pochwały.</blockquote><figcaption><b>Monika</b>, Tychy</figcaption></figure><figure><blockquote>Sympatyczna obsługa. Indywidualne podejście do pacjenta. Dziękuję :)</blockquote><figcaption><b>Andrzej</b>, Tychy</figcaption></figure><figure><blockquote>Jestem bardzo zadowolona z usługi, pani Agnieszka ma super podejście do klienta. Wszystko dokładnie tłumaczy, to już kolejna moja wizyta, a następna już niedługo.</blockquote><figcaption><b>Barbara</b>, Zabrze</figcaption></figure><figure><blockquote>Polecam!</blockquote><figcaption><b>Marta</b>, Wola</figcaption></figure><figure><blockquote>Byłam na wizycie z 2 córkami. Mają wadę postawy i koślawość stóp. Pełen profesjonalizm, dokładność, troska o pacjenta, ogromna wiedza. Pani Agnieszka to specjalista z najwyższej półki. Gorąco polecam.</blockquote><figcaption><b>Katarzyna</b>, Łaziska Górne</figcaption></figure></div><div class="karuz-n"><button type="button" data-k="-1" aria-label="Poprzednia opinia">‹</button><button type="button" data-k="1" aria-label="Następna opinia">›</button></div></div>
 <div class="btns" style="margin-top:22px"><a class="btn o" href="#" onclick="return false">Opinie w Google <span class="uz">[link]</span></a><a class="btn o" href="https://rejestracja.medfile.pl/register/catalog/?uuid=08df65a6-e39d-a68d-3ffb-6508af1e03f0" target="_blank" rel="noopener">Opinie w Medfile</a><a class="btn n" href="../kontakt/#opinia">Dodaj opinię</a></div>
 <p class="uw" style="font-size:14px;color:var(--tekst2);margin-top:12px">Opinie dodane na stronie pojawiają się dopiero po zatwierdzeniu w panelu.</p></div></section></main>
 <footer class="stopka"><div class="w">
 <div><img src="../logo.png" width="180" height="54" alt="PLANTARIS" style="background:#fff;border-radius:8px;padding:6px 8px;margin-bottom:12px"><p>Podologia, diagnostyka stóp, wkładki ortopedyczne i dietetyka kliniczna w Tychach i w Woli. Wizyty po wcześniejszym umówieniu.</p></div>
 <div><h4>Gabinety</h4><ul><li><a href="../gabinet-tychy/">PLANTARIS Tychy</a><br>ul. Gabrieli Zapolskiej 65B, 43-100 Tychy</li><li style="margin-top:8px"><a href="../gabinet-wola/">PLANTARIS Wola</a><br>ul. Lipowa 7a, 43-225 Wola</li></ul></div>
-<div><h4>Kontakt</h4><ul><li><a href="tel:+48503100341">503 100 341</a> Agnieszka</li><li><a href="tel:+48500138088">500 138 088</a> Łukasz</li><li><a href="mailto:kontakt@plantaris.pl">kontakt@plantaris.pl</a></li><li>Facebook, Instagram <span class="uz">[linki]</span></li></ul></div>
+<div><h4>Kontakt</h4><ul><li><a href="tel:+48503100341">503 100 341</a> podologia i dietetyka</li><li><a href="tel:+48500138088">500 138 088</a> diagnostyka i wkładki</li><li><a href="mailto:kontakt@plantaris.pl">kontakt@plantaris.pl</a></li><li>Facebook, Instagram <span class="uz">[linki]</span></li></ul></div>
 <div><h4>Na skróty</h4><ul><li><a href="../umow-wizyte/">Umów wizytę</a></li><li><a href="../cennik/">Cennik</a></li><li><a href="../strefa-pacjenta/">Strefa pacjenta</a></li><li><a href="../szkolenia/">Szkolenia</a></li><li><a href="../sklep/">Sklep</a></li><li><a href="../blog/">Blog</a></li></ul></div>
 <div class="dol"><span>© 2026 PLANTARIS. Polityka prywatności, regulamin sklepu</span><a class="wylinka-badge" href="https://wylinka.pl/?utm_source=plantaris.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a>
 </div>
 </div></footer>
 <div class="mobbar"><a class="btn o" href="tel:+48503100341" data-tel>Zadzwoń</a><a class="btn" href="../umow-wizyte/">Umów wizytę</a></div>
-<div class="wybor-tel" id="wybor-tel"><a href="tel:+48503100341"><b>503 100 341</b><span>Agnieszka Nowotnik: podologia, leczenie ran, dietetyka</span></a><a href="tel:+48500138088"><b>500 138 088</b><span>Łukasz Trzepieciński: diagnostyka stóp, wkładki</span></a></div>
+<div class="wybor-tel" id="wybor-tel"><a href="tel:+48503100341"><b>503 100 341</b><span>podologia, leczenie ran, dietetyka</span></a><a href="tel:+48500138088"><b>500 138 088</b><span>diagnostyka stóp, wkładki ortopedyczne</span></a></div>
 <script>
 document.querySelectorAll('[data-burger]').forEach(b=>b.addEventListener('click',()=>{const m=document.getElementById('menu');const o=m.classList.toggle('otw');b.setAttribute('aria-expanded',o)}));
 const wt=document.getElementById('wybor-tel');document.querySelectorAll('[data-tel]').forEach(b=>b.addEventListener('click',ev=>{ev.preventDefault();wt.classList.toggle('otw')}));
 document.addEventListener('click',ev=>{if(wt&&!ev.target.closest('#wybor-tel,[data-tel]'))wt.classList.remove('otw')});
 document.querySelectorAll('.zaslona button').forEach(b=>b.addEventListener('click',()=>{const z=b.parentElement;const o=z.classList.toggle('odkr');b.querySelector('span').textContent=o?'Ukryj zdjęcia':'Pokaż zdjęcia'}));
+document.querySelectorAll('[data-karuz]').forEach(t=>{const kr=()=>t.firstElementChild.getBoundingClientRect().width+16;const ruch=k=>{const max=t.scrollWidth-t.clientWidth-4;t.scrollTo({left:k>0&&t.scrollLeft>=max?0:t.scrollLeft+k*kr(),behavior:'smooth'})};t.parentElement.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>ruch(+b.dataset.k));let st=false;t.addEventListener('mouseenter',()=>st=true);t.addEventListener('mouseleave',()=>st=false);t.addEventListener('touchstart',()=>st=true,{passive:true});if(!matchMedia('(prefers-reduced-motion: reduce)').matches)setInterval(()=>{if(!st)ruch(1)},5000)});
 document.querySelectorAll('form[data-demo]').forEach(f=>f.addEventListener('submit',ev=>{ev.preventDefault();const m=f.parentElement.querySelector('.msg');if(m){m.classList.add('on');m.scrollIntoView({block:'nearest'})}}));
 </script>
 </body></html>
