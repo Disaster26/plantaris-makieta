@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Pokaz zapisu na szkolenie - PLANTARIS</title><meta name="description" content="Pokaz kalendarza zapisów na szkolenia z liczeniem i blokowaniem miejsc, na przykładowych danych."><meta name="robots" content="noindex,nofollow">
+<title>Grzybica paznokci Tychy, Wola - PLANTARIS</title><meta name="description" content="Terapia grzybicy, nadkażeń bakteryjnych lub zmian skórno-paznokciowych."><meta name="robots" content="noindex,nofollow">
 <link rel="preload" href="../../fonts/jost-rdzen.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="../../fonts/inter-rdzen.woff2" as="font" type="font/woff2" crossorigin>
 <style>@font-face{font-family:Jost;font-weight:300 700;font-display:swap;src:url(../../fonts/jost-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0-00FF,U+2013-2026,U+20AC}
 @font-face{font-family:Jost;font-weight:300 700;font-display:swap;src:url(../../fonts/jost-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
@@ -390,6 +390,90 @@ details.cen-poz .roz .cz{font-size:14.5px}
 @media (max-width:860px){.profil,.profil.odw{grid-template-columns:1fr}.profil .ph.r45{aspect-ratio:4/3}.metr{grid-template-columns:repeat(3,minmax(0,1fr))}.metr div{padding:8px;font-size:12.5px}}
 details.cen-poz>summary .c{grid-row:auto;white-space:nowrap}
 @media (max-width:640px){details.cen-poz>summary{grid-template-columns:minmax(0,1fr) auto 18px;gap:10px}details.cen-poz>summary h3{font-size:16px}details.cen-poz .roz{padding-right:0}}
+/* ikony kafelków zabiegów (25.11) */
+.ik{display:block;width:64px;height:64px;color:var(--granat)}
+.ik .ak{stroke:var(--fuksja)}.ik .f{fill:var(--fuksja);stroke:none}
+.kafel .ikona{display:flex;align-items:center;justify-content:center;height:128px;background:linear-gradient(160deg,var(--jasny),#F4F8FC);border-bottom:1px solid var(--linia)}
+.kafel .ikona .ik{width:92px;height:92px;transition:transform .25s}
+a.kafel:hover .ikona .ik{transform:scale(1.06)}
+@media (max-width:640px){.kafel .ikona{height:112px}.kafel .ikona .ik{width:80px;height:80px}}
+/* obszary terapii na stronie głównej */
+.obszary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,24px)}
+.obsz{display:flex;flex-direction:column;background:#fff;border:1px solid var(--linia);border-radius:var(--r);padding:22px 22px 24px}
+.obsz .ikona.m{width:84px;height:84px;border-radius:50%;background:var(--jasny);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.obsz .ikona.m .ik{width:64px;height:64px}
+.obsz .tr{display:flex;flex-direction:column;flex:1}
+.obsz .nr{font:600 13px Jost,Inter,sans-serif;color:var(--nieb);margin-bottom:6px}
+.obsz h3{font-size:clamp(18px,1.6vw,20px);margin-bottom:8px}
+.obsz p{font-size:15px;color:var(--tekst2);margin:0 0 18px}
+.obsz .btn,.obsz details{margin-top:auto;align-self:flex-start}
+details.wybor{position:relative}
+details.wybor summary{list-style:none}
+details.wybor summary::-webkit-details-marker{display:none}
+details.wybor summary::after{content:"";width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin:-4px 0 0 4px;transition:transform .2s}
+details.wybor[open] summary::after{transform:rotate(-135deg);margin-top:4px}
+details.wybor>div{margin-top:8px;display:flex;flex-direction:column;border:1px solid var(--linia);border-radius:10px;overflow:hidden;background:#fff}
+details.wybor>div a{display:flex;justify-content:space-between;gap:12px;padding:12px 14px;text-decoration:none;color:var(--granat);font:500 15.5px/1.3 Jost,Inter,sans-serif;border-top:1px solid var(--linia)}
+details.wybor>div a:first-child{border-top:0}
+details.wybor>div a:hover{background:var(--szary);color:var(--nieb)}
+details.wybor>div a span{color:var(--fuksja)}
+@media (max-width:1000px){.obszary{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.obszary{grid-template-columns:1fr}.obsz{padding:18px}}
+.przyg{background:#fff;border-radius:18px;padding:clamp(18px,3vw,28px);border:1px solid var(--linia)}
+.przyg h3{font-size:clamp(18px,1.8vw,21px);margin-bottom:14px}
+.przyg .btns{flex-direction:column;align-items:stretch}
+/* profile, o nas */
+.profil .bio{margin:0 0 12px;font-size:15.5px;color:#E6EEF7}
+.profil .bio a{color:#fff}
+.podpis{margin-top:18px;color:var(--tekst2)}.podpis b{display:block;font:600 19px Jost,Inter,sans-serif;color:var(--granat)}
+/* wyróżnienia */
+.wyr{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start}
+.wyr-lista{margin:16px 0;padding-left:20px}.wyr-lista li{margin-bottom:10px}
+.wyr .koniec{font:500 17px/1.5 Jost,Inter,sans-serif;color:var(--granat)}
+.znaki{display:grid;gap:14px}
+.znak{display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;align-items:center;background:#fff;border:1px solid var(--linia);border-radius:var(--r);padding:12px}
+.znak .ph{min-height:0;padding:8px;font-size:12px}
+.znak b{display:block;font:600 17px/1.3 Jost,Inter,sans-serif;color:var(--granat)}
+.znak .kod{display:block;font-weight:600;color:var(--fuksja);margin:2px 0}
+.znak span{font-size:14.5px;color:var(--tekst2)}
+@media (max-width:860px){.wyr{grid-template-columns:1fr}}
+/* diagnostyka i wkładki */
+.wsk{padding-left:20px}.wsk li{margin-bottom:10px}
+.etapy.e3{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:34px}
+.etapy.e4{grid-template-columns:repeat(4,minmax(0,1fr));row-gap:34px}
+.etapy.e3 div,.etapy.e4 div{padding-right:22px}
+@media (max-width:900px){.etapy.e3,.etapy.e4{grid-template-columns:1fr;row-gap:0}}
+.pietra{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.pietra div{background:var(--szary);border-radius:12px;padding:18px}
+.pietra h3{font-size:17px}.pietra p{font-size:14.5px;color:var(--tekst2);margin:0}
+@media (max-width:1000px){.pietra{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.pietra{grid-template-columns:1fr}}
+.porown{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:stretch}
+.por.nasz{grid-column:1/-1;padding:clamp(20px,3vw,32px)}.por.nasz h3{font-size:clamp(19px,2vw,23px)}
+.por.nasz ul{columns:2;column-gap:40px}.por.nasz li{break-inside:avoid}
+@media (max-width:860px){.por.nasz ul{columns:1}}
+.por{background:#fff;border:1px solid var(--linia);border-radius:var(--r);padding:20px}
+.por h3{font-size:17.5px;margin-bottom:12px}
+.por ul{margin:0;padding-left:18px;font-size:14.5px;color:var(--tekst2)}.por li{margin-bottom:9px}
+.por li b{color:var(--granat)}
+.por.nasz{background:var(--granat);border-color:var(--granat);color:#D3DFEE}
+.por.nasz h3,.por.nasz li b{color:#fff}.por.nasz ul{color:#D3DFEE}
+@media (max-width:1000px){.porown{grid-template-columns:1fr}}
+@media (max-width:640px){.porown{grid-template-columns:1fr}}
+/* sklep: kod rabatowy */
+.kod{margin:0 0 14px}
+.kod label{display:block;font-size:14px;font-weight:600;color:var(--granat);margin-bottom:6px}
+.kod div{display:flex;gap:8px}
+.kod input{flex:1;min-width:0;font:16px Inter,sans-serif;padding:10px 12px;border:1px solid #B9C8D9;border-radius:10px;text-transform:uppercase}
+.kod .btn{min-height:44px;padding:8px 14px}
+.kod-msg{font-size:13.5px;color:var(--tekst2);margin:6px 0 0;min-height:1em}
+.koszyk .rabat{display:flex;justify-content:space-between;font-size:14.5px;color:var(--fuksja);margin-top:8px}
+/* mapa gabinetu */
+.mapa{border-radius:var(--r);overflow:hidden;border:1px solid var(--linia);aspect-ratio:4/3;background:var(--szary)}
+.mapa iframe{display:block;width:100%;height:100%;border:0}
+
+.sz .info3>div{background:#fff}
+details.wybor summary.btn.o:hover,details.wybor[open] summary.btn.o{background:var(--granat);color:#fff;border-color:var(--granat)}
 <style>
 .wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
 .wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
@@ -403,73 +487,36 @@ details.cen-poz>summary .c{grid-row:auto;white-space:nowrap}
 @media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
 </style>
 </style></head><body>
-<div class="mk">Makieta układu strony. Pola w paski to miejsca na nowe zdjęcia, teksty oznaczone na żółto są do uzupełnienia.</div>
+<div class="mk">Wersja robocza strony. Pola w paski to miejsca na zdjęcia, teksty oznaczone na żółto są do uzupełnienia.</div>
 <div class="top"><div class="w"><div class="tel"><a href="tel:+48503100341"><span>Podologia i dietetyka: </span>503 100 341</a><a href="tel:+48500138088"><span>Diagnostyka i wkładki: </span>500 138 088</a></div>
 <div class="dod"><a href="../../sklep/">Sklep</a><a href="../../blog/">Blog</a><a href="mailto:kontakt@plantaris.pl">kontakt@plantaris.pl</a></div></div></div>
 <header class="hdr"><div class="w"><a class="logo" href="../../" aria-label="PLANTARIS, strona główna"><img src="../../logo.png" width="400" height="120" alt="PLANTARIS diagnostyka i terapia stóp"></a>
-<nav class="menu" id="menu" aria-label="Menu główne"><a href="../../o-nas/">O nas</a><a href="../../zabiegi/">Zabiegi</a><a href="../../diagnostyka-stop/">Diagnostyka stóp</a><a href="../../wkladki-ortopedyczne/">Wkładki</a><a href="../../strefa-pacjenta/">Strefa pacjenta</a><a href="../../szkolenia/" class=akt aria-current=page>Szkolenia</a><a href="../../cennik/">Cennik</a><a href="../../kontakt/">Kontakt</a><div class="dod-m"><a href="../../sklep/">Sklep</a><a href="../../blog/">Blog</a></div></nav>
+<nav class="menu" id="menu" aria-label="Menu główne"><a href="../../o-nas/">O nas</a><a href="../../zabiegi/" class=akt aria-current=page>Zabiegi</a><a href="../../diagnostyka-stop/">Diagnostyka stóp</a><a href="../../wkladki-ortopedyczne/">Wkładki</a><a href="../../strefa-pacjenta/">Strefa pacjenta</a><a href="../../szkolenia/">Szkolenia</a><a href="../../cennik/">Cennik</a><a href="../../kontakt/">Kontakt</a><div class="dod-m"><a href="../../sklep/">Sklep</a><a href="../../blog/">Blog</a></div></nav>
 <a class="btn wiz" href="../../umow-wizyte/">Umów wizytę</a>
 <button class="burger" type="button" data-burger aria-controls="menu" aria-expanded="false" aria-label="Otwórz menu"><span></span></button></div></header>
-<main><style>
-.zd-head{background:var(--granat);color:#D3DFEE;padding:0 0 clamp(32px,5vw,56px)}
-.zd-head h1{color:#fff;font-size:clamp(28px,3.6vw,44px);margin-top:18px}
-.zd-head .lead{color:#C9D7E8;margin-bottom:0}
-.zd-info{display:flex;gap:12px;align-items:flex-start;background:#FFF6D6;border:1px solid #EAD48A;border-radius:12px;padding:12px 16px;font-size:14.5px;color:#5A4A12;margin:0 0 24px}
-.zd-info b{white-space:nowrap}
-.kal-s .d.t.malo{background:#FBE3EF;color:var(--fuksja-h)}
-.kal-leg i.m{background:#FBE3EF}
-.zd-det{background:#fff;border:1px solid var(--linia);border-radius:18px;padding:clamp(18px,3vw,28px)}
-.zd-det h3{font-size:clamp(19px,2vw,23px);margin-bottom:8px}
-.zd-det .meta{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:14.5px;color:var(--tekst2);margin-bottom:14px}
-.zd-licz{font:600 clamp(19px,2vw,22px)/1.3 Jost,Inter,sans-serif;color:var(--nieb);margin:4px 0 8px}
-.zd-licz.malo{color:var(--fuksja-h)}.zd-licz.brak{color:#A33}
-.zd-det .pasek{height:8px}
-.zd-det .pasek i.malo{background:var(--fuksja)}.zd-det .pasek i.brak{background:#A33}
-.zd-det .fm{margin-top:18px}
-.zd-ok{background:var(--jasny);border-radius:12px;padding:14px 16px;margin-top:14px;font-size:15px}
-.zd-ok ul{margin:8px 0 0 18px}
-.zd-komplet{background:#F7F7F7;border:1px dashed #C9C9C9;border-radius:12px;padding:16px;margin-top:16px}
-.zd-komplet p{margin:0 0 6px}
-.zd-panel{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(20px,3vw,40px);align-items:start}
-.zd-box{background:#fff;border:1px solid var(--linia);border-radius:18px;padding:clamp(16px,2.5vw,24px)}
-.zd-box h3{font-size:18px;margin-bottom:10px}
-.zd-sel{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600;color:var(--granat);margin-bottom:14px}
-.zd-sel select{min-width:0;font:16px Inter,sans-serif;padding:10px 12px;border:1px solid #B9C8D9;border-radius:10px;background:#fff;width:100%}
-.zd-tab{overflow:auto;max-height:480px;border:1px solid var(--linia);border-radius:12px}
-.zd-tab table{width:100%;border-collapse:collapse;font-size:14px}
-.zd-tab td:nth-child(3){white-space:nowrap}
-.zd-tab th{position:sticky;top:0;background:var(--szary);text-align:left;font-weight:600;color:var(--granat);padding:9px 10px;border-bottom:1px solid var(--linia)}
-.zd-tab td{padding:8px 10px;border-bottom:1px solid #EDF1F6;color:var(--tekst)}
-.zd-tab td small{display:block;color:var(--tekst2)}
-.zd-tab tr.nowy td{background:#FDF0F6}
-.zd-tab .pusto{color:var(--tekst2);padding:14px 10px}
-.zd-sum{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px;color:var(--tekst2);margin-bottom:10px}
-.zd-sum b{color:var(--granat)}
-.gk{border:1px solid var(--linia);border-radius:12px;overflow:hidden;font-size:14px}
-.gk-g{display:flex;justify-content:space-between;align-items:center;background:var(--szary);padding:8px 12px;font-weight:600;color:var(--granat)}
-.gk-g span{font-weight:400;color:var(--tekst2);font-size:13px}
-.gk-e{margin:12px;border-left:5px solid var(--nieb);background:#EEF4FC;border-radius:6px;padding:10px 12px}
-.gk-e b{display:block;color:var(--granat)}
-.gk-e small{display:block;color:var(--tekst2);margin-top:4px;white-space:pre-line}
-.zd-pow{margin-top:16px}
-.zd-pow ul{margin:6px 0 0 18px;font-size:14px}
-@media (max-width:900px){.zd-panel{grid-template-columns:minmax(0,1fr)}}
-@media (max-width:640px){.zd-info{flex-direction:column;gap:4px}.zd-tab table{font-size:13px}.zd-tab th,.zd-tab td{padding:7px 6px}}
-</style>
-<section class="zd-head"><div class="w"><nav class="okr" aria-label="Jesteś tutaj"><a href="../../">Strona główna</a> / <a href="../../szkolenia/">Szkolenia</a> / Pokaz zapisu</nav>
-<h1>Jak działa zapis na szkolenie</h1><p class="lead">Kalendarz z liczeniem miejsc: zapis z formularza zmniejsza liczbę wolnych miejsc, a przy komplecie termin sam się blokuje. Można kliknąć termin i zapisać się na próbę.</p></div></section>
-<section class="sek"><div class="w">
-<div class="zd-info"><b>Pokaz na przykładowych danych.</b><span>Terminy, liczby miejsc i osoby na liście są wymyślone. Formularz niczego nie wysyła, zapisy zostają tylko w tym oknie i znikają po odświeżeniu strony.</span></div>
-<div class="kal-wrap"><div class="kal"><div class="kal-g"><button type="button" id="kal-p" aria-label="Poprzedni miesiąc">‹</button><h3 id="kal-m"></h3><button type="button" id="kal-n" aria-label="Następny miesiąc">›</button></div><div class="kal-s" id="kal-s"></div>
-<div class="kal-leg"><span><i></i>wolne miejsca</span><span><i class="m"></i>mało miejsc (1-2)</span><span><i class="f"></i>komplet</span></div></div>
-<div class="zd-det" id="zd-det" aria-live="polite"></div></div></div></section>
-<section class="sek sz" id="panel"><div class="w"><h2>Co widzi Pani w panelu</h2><p class="lead" style="margin-bottom:24px">Lista zapisanych na wybrany termin. Ten sam termin jest w Pani Kalendarzu Google i aktualizuje się przy każdym zapisie.</p>
-<div class="zd-panel"><div class="zd-box"><label class="zd-sel">Termin<select id="zd-sel"></select></label><div class="zd-sum" id="zd-sum"></div>
-<div class="zd-tab"><table><thead><tr><th>Lp.</th><th>Uczestnik</th><th>Telefon</th><th>Data zapisu</th></tr></thead><tbody id="zd-tb"></tbody></table></div></div>
-<div class="zd-box"><h3>W Kalendarzu Google</h3><div class="gk"><div class="gk-g" id="gk-g"></div><div class="gk-e" id="gk-e"></div></div>
-<p style="font-size:14.5px;color:var(--tekst2);margin-top:12px">Termin szkolenia dodaje Pani w swoim Kalendarzu Google albo w panelu strony, z liczbą miejsc. Strona pokazuje go od razu w kalendarzu zapisów, a każdy nowy zapis dopisuje się do wydarzenia.</p>
-<div class="zd-pow" id="zd-pw"></div></div></div>
-<div class="btns" style="margin-top:28px"><a class="btn n" href="../../szkolenia/#kalendarz">Wróć do szkoleń</a></div></div></section></main>
+<main><section class="ph-head"><div class="w" style="display:block;padding:0"><nav class="okr" aria-label="Jesteś tutaj"><a href="../../">Strona główna</a> / <a href="../../zabiegi/">Zabiegi</a> / Grzybica paznokci</nav></div>
+<div class="w"><div><h1>Grzybica paznokci (onychomikoza) - terapia w Tychach i Woli</h1><p class="lead">Terapia grzybicy, nadkażeń bakteryjnych lub zmian skórno-paznokciowych.</p><div class="btns"><a class="btn " href="../../umow-wizyte/">Umów wizytę</a></div></div><div class="ph r32 c" role="img" aria-label="Miejsce na zdjęcie: Grzybica paznokci: zdjęcie lub ilustracja"><div><b>tu zdjęcie</b>Grzybica paznokci: zdjęcie lub ilustracja</div></div></div></section>
+<section class="sek"><div class="w zab">
+<div class="tresc">
+<h2>Czym jest problem</h2><p><span class="uz">[opis zabiegu od Pani]</span></p>
+<h2>Dla kogo jest usługa</h2><p><span class="uz">[krótko: z jakimi objawami warto przyjść]</span></p>
+<h2>Jak przebiega wizyta</h2><p><span class="uz">[wywiad, ocena, zabieg, zalecenia]</span></p>
+
+<h2>Przewidywany przebieg terapii</h2><p><span class="uz">[liczba wizyt, odstępy, kontrola]</span></p>
+<h2>Do pobrania</h2>
+<div class="zal"><a href="#" onclick="return false">Dokumenty przed zabiegiem <span>PDF</span></a><a href="#" onclick="return false">Zalecenia pozabiegowe <span>PDF</span></a><a href="#" onclick="return false">Instrukcje stosowanych preparatów <span>PDF</span></a><a href="../../sklep/">Proponowane produkty <span>sklep</span></a></div>
+</div>
+<aside><div class="boks"><h3>Grzybica paznokci</h3><div class="poz"><span>Terapia grzybicy, nadkażeń bakteryjnych lub zmian skórno-paznokciowych<small>30-60 min</small></span><b>250 zł / 1 paznokieć</b></div><div class="poz"><span>Badanie mykologiczne</span><b>250 zł</b></div>
+<div class="poz"><span>Orientacyjny czas wizyty</span><b>30-60 min</b></div>
+<a class="btn" href="https://rejestracja.medfile.pl/register/catalog/?uuid=08df65a6-e39d-a68d-3ffb-6508af1e03f0" target="_blank" rel="noopener">Umów wizytę w Medfile</a>
+<p class="alt">lub przez <a href="https://www.halodoctor.pl/lekarze/agnieszka-nowotnik-rehabilitant-podologiczny-tychy" target="_blank" rel="noopener">HaloDoctor</a>, telefon <a href="tel:+48503100341">503 100 341</a> (podologia)</p>
+<p class="alt">Ceny pobierane z <a href="../../cennik/">cennika</a>. Przy cenach „od” ostateczna kwota zależy od liczby zmian i trudności przypadku.</p></div></aside>
+</div></section>
+<section class="sek sz"><div class="w"><h2>Przykładowe terapie</h2><p class="lead">Zdjęcia kliniczne są domyślnie zasłonięte. Pacjent sam decyduje, czy je odsłonić, i może je ponownie ukryć.</p><div class="przyp"><article><div class="zaslona"><div class="ph r43" role="img" aria-label="Miejsce na zdjęcie: przypadek 1: przed i po"><div><b>tu zdjęcie</b>przypadek 1: przed i po</div></div><button type="button"><b>Zdjęcia zabiegowe</b><small>mogą zawierać widok zmian chorobowych</small><span>Pokaż zdjęcia</span></button></div>
+<div class="tr"><b>Przypadek 1</b> <span class="uz">[krótki opis i etap terapii]</span></div></article><article><div class="zaslona"><div class="ph r43" role="img" aria-label="Miejsce na zdjęcie: przypadek 2: przed i po"><div><b>tu zdjęcie</b>przypadek 2: przed i po</div></div><button type="button"><b>Zdjęcia zabiegowe</b><small>mogą zawierać widok zmian chorobowych</small><span>Pokaż zdjęcia</span></button></div>
+<div class="tr"><b>Przypadek 2</b> <span class="uz">[krótki opis i etap terapii]</span></div></article><article><div class="zaslona"><div class="ph r43" role="img" aria-label="Miejsce na zdjęcie: przypadek 3: przed i po"><div><b>tu zdjęcie</b>przypadek 3: przed i po</div></div><button type="button"><b>Zdjęcia zabiegowe</b><small>mogą zawierać widok zmian chorobowych</small><span>Pokaż zdjęcia</span></button></div>
+<div class="tr"><b>Przypadek 3</b> <span class="uz">[krótki opis i etap terapii]</span></div></article></div></div></section>
+<section class="sek"><div class="w"><h2>Inne zabiegi</h2><div class="siatka k4"><a class="kafel" href="../../zabiegi/zabieg-podologiczny/"><div class="ikona"><svg class="ik" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 45c-5 0-7-4-6-9 1-5 2-8 1-14-1-7 3-11 9-11s9 4 8 10c-1 5-3 8-2 13 1 6-3 11-10 11z"/><circle cx="16.5" cy="6.5" r="2.8"/><circle cx="22.5" cy="5" r="2"/><circle cx="27" cy="5.8" r="1.7"/><circle cx="30.6" cy="7.8" r="1.5"/><circle cx="33.4" cy="10.8" r="1.3"/><path class="ak" d="M39 22v8M35 26h8M36.2 23.2l5.6 5.6M41.8 23.2l-5.6 5.6"/></svg></div><div class="tr"><h3>Zabieg podologiczny</h3><p>Profilaktyczny, rozszerzony i medyczny: opracowanie stóp i paznokci bez moczenia stóp.</p><div class="meta"><span>od <b>180 zł</b></span><span>45-90 min</span></div><span class="wiecej">Dowiedz się więcej</span></div></a><a class="kafel" href="../../zabiegi/usuwanie-odciskow/"><div class="ikona"><svg class="ik" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 45c-5 0-7-4-6-9 1-5 2-8 1-14-1-7 3-11 9-11s9 4 8 10c-1 5-3 8-2 13 1 6-3 11-10 11z"/><circle cx="16.5" cy="6.5" r="2.8"/><circle cx="22.5" cy="5" r="2"/><circle cx="27" cy="5.8" r="1.7"/><circle cx="30.6" cy="7.8" r="1.5"/><circle cx="33.4" cy="10.8" r="1.3"/><circle class="ak" cx="21.5" cy="17" r="3.4"/><circle class="ak f" cx="21.5" cy="17" r=".9"/></svg></div><div class="tr"><h3>Usuwanie odcisków</h3><p>Bezbolesne usuwanie odcisków i nagniotków, odciążenie i dobór obuwia.</p><div class="meta"><span>od <b>150 zł / strefa</b></span><span>20-45 min</span></div><span class="wiecej">Dowiedz się więcej</span></div></a><a class="kafel" href="../../zabiegi/usuwanie-modzeli/"><div class="ikona"><svg class="ik" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 45c-5 0-7-4-6-9 1-5 2-8 1-14-1-7 3-11 9-11s9 4 8 10c-1 5-3 8-2 13 1 6-3 11-10 11z"/><circle cx="16.5" cy="6.5" r="2.8"/><circle cx="22.5" cy="5" r="2"/><circle cx="27" cy="5.8" r="1.7"/><circle cx="30.6" cy="7.8" r="1.5"/><circle cx="33.4" cy="10.8" r="1.3"/><ellipse class="ak" cx="22" cy="17.5" rx="6.2" ry="3.2"/><path class="ak" d="M18.5 19.5l3.5-4M22 20.5l3.6-4.4"/></svg></div><div class="tr"><h3>Usuwanie modzeli</h3><p>Zrogowacenia śródstopia: usuwanie, preparaty i wkładki, które usuwają przyczynę.</p><div class="meta"><span>od <b>150 zł / strefa</b></span><span>ok. 30-45 min</span></div><span class="wiecej">Dowiedz się więcej</span></div></a><a class="kafel" href="../../zabiegi/brodawki-wirusowe/"><div class="ikona"><svg class="ik" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 45c-5 0-7-4-6-9 1-5 2-8 1-14-1-7 3-11 9-11s9 4 8 10c-1 5-3 8-2 13 1 6-3 11-10 11z"/><circle cx="16.5" cy="6.5" r="2.8"/><circle cx="22.5" cy="5" r="2"/><circle cx="27" cy="5.8" r="1.7"/><circle cx="30.6" cy="7.8" r="1.5"/><circle cx="33.4" cy="10.8" r="1.3"/><circle class="ak" cx="20.5" cy="35.5" r="4"/><circle class="ak f" cx="19.2" cy="34.6" r=".8"/><circle class="ak f" cx="21.9" cy="34.8" r=".8"/><circle class="ak f" cx="20.6" cy="37.1" r=".8"/></svg></div><div class="tr"><h3>Brodawki wirusowe (kurzajki)</h3><p>Terapia brodawek pojedynczych i mnogich, odciążenie i zalecenia na czas leczenia.</p><div class="meta"><span>od <b>150 zł (do 3 sztuk)</b></span><span>30-60 min</span></div><span class="wiecej">Dowiedz się więcej</span></div></a></div></div></section></main>
 <footer class="stopka"><div class="w">
 <div><img src="../../logo.png" width="180" height="54" alt="PLANTARIS" style="background:#fff;border-radius:8px;padding:6px 8px;margin-bottom:12px"><p>Podologia, diagnostyka stóp, wkładki ortopedyczne i dietetyka kliniczna w Tychach i w Woli. Wizyty po wcześniejszym umówieniu.</p></div>
 <div><h4>Gabinety</h4><ul><li><a href="../../gabinet-tychy/">PLANTARIS Tychy</a><br>ul. Gabrieli Zapolskiej 65B, 43-100 Tychy</li><li style="margin-top:8px"><a href="../../gabinet-wola/">PLANTARIS Wola</a><br>ul. Lipowa 7a, 43-225 Wola</li></ul></div>
@@ -487,44 +534,5 @@ document.addEventListener('click',ev=>{if(wt&&!ev.target.closest('#wybor-tel,[da
 document.querySelectorAll('.zaslona button').forEach(b=>b.addEventListener('click',()=>{const z=b.parentElement;const o=z.classList.toggle('odkr');b.querySelector('span').textContent=o?'Ukryj zdjęcia':'Pokaż zdjęcia'}));
 document.querySelectorAll('[data-karuz]').forEach(t=>{const kr=()=>t.firstElementChild.getBoundingClientRect().width+16;const ruch=k=>{const max=t.scrollWidth-t.clientWidth-4;t.scrollTo({left:k>0&&t.scrollLeft>=max?0:t.scrollLeft+k*kr(),behavior:'smooth'})};t.parentElement.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>ruch(+b.dataset.k));let st=false;t.addEventListener('mouseenter',()=>st=true);t.addEventListener('mouseleave',()=>st=false);t.addEventListener('touchstart',()=>st=true,{passive:true});if(!matchMedia('(prefers-reduced-motion: reduce)').matches)setInterval(()=>{if(!st)ruch(1)},5000)});
 document.querySelectorAll('form[data-demo]').forEach(f=>f.addEventListener('submit',ev=>{ev.preventDefault();const m=f.parentElement.querySelector('.msg');if(m){m.classList.add('on');m.scrollIntoView({block:'nearest'})}}));
-const ZDT=[["2027-01-09", "Brodawki wirusowe stóp: diagnostyka i terapia", "stacjonarnie, Wola", "1 100 zł", 10, 7], ["2027-01-22", "Choroby skóry stóp i paznokci: etiologia oraz metody leczenia", "online", "690 zł", 30, 17], ["2027-01-30", "Łuszczyca paznokci: studium przypadków", "stacjonarnie, Wola", "1 100 zł", 10, 9], ["2027-02-12", "Dietoterapia i suplementacja w podologii", "online", "590 zł", 30, 22], ["2027-02-20", "Grzybica paznokci: studium przypadków", "stacjonarnie, Wola", "1 100 zł", 10, 10], ["2027-02-27", "ACIDUM IV: terapia grzybic paznokci kwasami wysokospecjalistycznymi", "stacjonarnie, Wola", "1 500 zł", 8, 6], ["2027-03-05", "Mikrobiom w podologii, trychologii i dermatologii", "online", "690 zł", 30, 12]];
-const IM=['Anna','Katarzyna','Magdalena','Joanna','Monika','Agata','Ewa','Paulina','Karolina','Natalia','Marta','Aleksandra','Beata','Justyna','Dorota','Patrycja','Sylwia','Izabela','Weronika','Kamila','Alicja','Martyna','Barbara','Renata'];
-const NZ=['Kowalska','Nowak','Wiśniewska','Wójcik','Kamińska','Lewandowska','Zielińska','Szymańska','Dąbrowska','Kozłowska','Jankowska','Mazur','Krawczyk','Piotrowska','Grabowska','Pawlak','Michalska','Nowicka','Adamczyk','Dudek','Zając','Wieczorek','Jabłońska','Król','Majewska'];
-const PL={'ą':'a','ć':'c','ę':'e','ł':'l','ń':'n','ó':'o','ś':'s','ź':'z','ż':'z'};
-const asc=s=>s.toLowerCase().replace(/[ąćęłńóśźż]/g,c=>PL[c]);
-const T=ZDT.map((x,i)=>{const o={d:x[0],t:x[1],f:x[2],c:x[3],l:x[4],u:[],pw:[]};for(let k=0;k<x[5];k++){const a=IM[(k*7+i*3)%IM.length],b=NZ[(k*11+i*5)%NZ.length];const dd=new Date(x[0]);dd.setDate(dd.getDate()-40+k);o.u.push({i:a,n:b,e:asc(a[0]+'.'+b)+'@example.pl',tel:'6'+String(10+(k*37+i*13)%89)+' *** '+String(100+(k*53+i*29)%899),z:dd.toLocaleDateString('pl-PL'),nowy:false})}return o});
-const MN=['styczeń','luty','marzec','kwiecień','maj','czerwiec','lipiec','sierpień','wrzesień','październik','listopad','grudzień'];
-const MD=['stycznia','lutego','marca','kwietnia','maja','czerwca','lipca','sierpnia','września','października','listopada','grudnia'];
-const DT=['niedziela','poniedziałek','wtorek','środa','czwartek','piątek','sobota'];
-const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const dl=d=>{const x=new Date(d);return x.getDate()+' '+MD[x.getMonth()]+' '+x.getFullYear()};
-const wolne=x=>x.l-x.u.length;
-const stan=x=>{const w=wolne(x);return w<=0?'brak':(w<=2?'malo':'ok')};
-let wyb=2,cur=new Date(2027,0,1);
-const S=document.getElementById('kal-s'),M=document.getElementById('kal-m'),DZ=document.getElementById('zd-det'),SEL=document.getElementById('zd-sel');
-SEL.innerHTML=T.map((x,i)=>`<option value="${i}">${dl(x.d)}: ${esc(x.t)}</option>`).join('');
-function kal(){const r=cur.getFullYear(),m=cur.getMonth();M.textContent=MN[m]+' '+r;let h=['pn','wt','śr','cz','pt','sb','nd'].map(d=>`<div class="dn">${d}</div>`).join('');const p=(new Date(r,m,1).getDay()+6)%7,n=new Date(r,m+1,0).getDate();for(let i=0;i<p;i++)h+='<div></div>';
-for(let d=1;d<=n;d++){const k=`${r}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;const i=T.findIndex(x=>x.d==k);if(i<0){h+=`<div class="d">${d}</div>`;continue}const s=stan(T[i]);h+=`<div class="d t${s=='brak'?' full':s=='malo'?' malo':''}${i==wyb?' wyb':''}" data-i="${i}" tabindex="0" role="button" aria-label="${d} ${MD[m]}: ${esc(T[i].t)}, ${s=='brak'?'komplet':'wolne miejsca: '+wolne(T[i])}">${d}</div>`}
-S.innerHTML=h;S.querySelectorAll('.d.t').forEach(el=>{const f=()=>{wyb=+el.dataset.i;rys(true)};el.onclick=f;el.onkeydown=ev=>{if(ev.key=='Enter'||ev.key==' '){ev.preventDefault();f()}}})}
-function det(info){const x=T[wyb],w=wolne(x),s=stan(x),p=Math.round(x.u.length/x.l*100),dz=new Date(x.d);
-let h=`<h3>${esc(x.t)}</h3><div class="meta"><span>${DT[dz.getDay()]}, ${dl(x.d)}</span><span>${esc(x.f)}</span><span>cena: ${esc(x.c)}</span></div>
-<p class="zd-licz ${s}">${w>0?`Zostało ${w} z ${x.l} miejsc`:`Komplet: ${x.l} z ${x.l} miejsc zajętych`}</p><div class="pasek"><i class="${s}" style="width:${p}%"></i></div>`;
-if(w>0){h+=`<form class="fm" id="zd-f"><label>Imię<input name="i" required autocomplete="given-name"></label><label>Nazwisko<input name="n" required autocomplete="family-name"></label><label>E-mail<input type="email" name="e" required autocomplete="email"></label><label>Telefon<input type="tel" name="tel" required autocomplete="tel"></label><label class="zgoda cale"><input type="checkbox" required> Akceptuję regulamin szkoleń i politykę prywatności.</label><div class="cale"><button class="btn">Zapisz się na szkolenie</button></div></form>`}
-else{h+=`<div class="zd-komplet"><p><b>Ten termin jest już pełny, zapis jest zablokowany.</b></p><p>Można zostawić adres e-mail, a powiadomimy o kolejnym terminie lub zwolnionym miejscu.</p><form class="fm" id="zd-p"><label class="cale">E-mail<input type="email" name="e" required autocomplete="email"></label><div class="cale"><button class="btn">Powiadom mnie o terminie</button></div></form></div>`}
-if(info)h+=info;DZ.innerHTML=h;
-const f=document.getElementById('zd-f');if(f)f.onsubmit=ev=>{ev.preventDefault();const d=new FormData(f);T.forEach(t=>t.u.forEach(u=>u.nowy=false));const u={i:d.get('i').trim(),n:d.get('n').trim(),e:d.get('e').trim(),tel:d.get('tel').trim(),z:new Date().toLocaleDateString('pl-PL'),nowy:true};x.u.push(u);const w2=wolne(x);
-rys(false,`<div class="zd-ok"><b>Zapis przyjęty: ${esc(u.i)} ${esc(u.n)}.</b> Licznik zmniejszył się o 1${w2==0?', termin jest teraz pełny i zablokowany':''}.<ul><li>uczestnik dostaje potwierdzenie na ${esc(u.e)}</li><li>Pani dostaje powiadomienie o nowym zapisie</li><li>osoba pojawia się na liście w panelu i w Kalendarzu Google</li></ul></div>`)};
-const pf=document.getElementById('zd-p');if(pf)pf.onsubmit=ev=>{ev.preventDefault();const e=new FormData(pf).get('e').trim();x.pw.push(e);rys(false,`<div class="zd-ok"><b>Zapisano prośbę o powiadomienie: ${esc(e)}.</b> Adres trafia do panelu przy tym terminie.</div>`)}}
-function panel(){const x=T[wyb];SEL.value=wyb;const tb=x.u.map((u,k)=>`<tr${u.nowy?' class="nowy"':''}><td>${k+1}</td><td>${esc(u.i)} ${esc(u.n)}<small>${esc(u.e)}</small></td><td>${esc(u.tel)}</td><td>${esc(u.z)}${u.nowy?'<small>nowy zapis</small>':''}</td></tr>`).join('');
-document.getElementById('zd-sum').innerHTML=`<span>Zapisanych: <b>${x.u.length} z ${x.l}</b></span><span>Wolne: <b>${Math.max(0,wolne(x))}</b></span><span>Stan: <b>${stan(x)=='brak'?'komplet, zapis zablokowany':'zapisy otwarte'}</b></span>`;
-document.getElementById('zd-tb').innerHTML=tb||'<tr><td colspan="4" class="pusto">Brak zapisanych.</td></tr>';
-const dz=new Date(x.d);document.getElementById('gk-g').innerHTML=`Kalendarz Google <span>${DT[dz.getDay()]}, ${dl(x.d)}</span>`;
-document.getElementById('gk-e').innerHTML=`<b>Szkolenie: ${esc(x.t)}</b><small>${esc(x.f)} · zapisanych ${x.u.length}/${x.l}${wolne(x)<=0?' · KOMPLET':''}\nUczestnicy: ${x.u.slice(-3).map(u=>esc(u.i+' '+u.n)).join(', ')}${x.u.length>3?' i inni':''}</small>`;
-const pw=document.getElementById('zd-pw');pw.innerHTML=x.pw.length?`<h3>Czekają na powiadomienie</h3><ul>${x.pw.map(e=>`<li>${esc(e)}</li>`).join('')}</ul>`:''}
-function rys(przewin,info){const dz=new Date(T[wyb].d);cur=new Date(dz.getFullYear(),dz.getMonth(),1);kal();det(info);panel();if(przewin&&matchMedia('(max-width:900px)').matches)DZ.scrollIntoView({behavior:'smooth',block:'start'})}
-document.getElementById('kal-p').onclick=()=>{cur=new Date(cur.getFullYear(),cur.getMonth()-1,1);kal()};
-document.getElementById('kal-n').onclick=()=>{cur=new Date(cur.getFullYear(),cur.getMonth()+1,1);kal()};
-SEL.onchange=()=>{wyb=+SEL.value;rys(false)};
-rys(false);
 </script>
 </body></html>

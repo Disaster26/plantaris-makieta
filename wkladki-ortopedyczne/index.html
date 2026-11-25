@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Wkładki ortopedyczne Tychy, Wola - indywidualne, dla dorosłych i dzieci - PLANTARIS</title><meta name="description" content="Indywidualne wkładki ortopedyczne w Tychach i Woli: badanie, dobór, wykonanie, dopasowanie i kontrola. Wkładki dla dorosłych, dzieci, odciążające."><meta name="robots" content="noindex,nofollow">
+<title>Wkładki ortopedyczne Tychy, Wola - indywidualne, dla dorosłych i dzieci - PLANTARIS</title><meta name="description" content="Indywidualne wkładki ortopedyczne PLANTARIS i Ortosic w Tychach i Woli: badanie, odbitka w statyce i dynamice, produkcja, dopasowanie, kontrola. Czym różnią się od wkładek ze sklepu."><meta name="robots" content="noindex,nofollow">
 <link rel="preload" href="../fonts/jost-rdzen.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="../fonts/inter-rdzen.woff2" as="font" type="font/woff2" crossorigin>
 <style>@font-face{font-family:Jost;font-weight:300 700;font-display:swap;src:url(../fonts/jost-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0-00FF,U+2013-2026,U+20AC}
 @font-face{font-family:Jost;font-weight:300 700;font-display:swap;src:url(../fonts/jost-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
@@ -390,6 +390,90 @@ details.cen-poz .roz .cz{font-size:14.5px}
 @media (max-width:860px){.profil,.profil.odw{grid-template-columns:1fr}.profil .ph.r45{aspect-ratio:4/3}.metr{grid-template-columns:repeat(3,minmax(0,1fr))}.metr div{padding:8px;font-size:12.5px}}
 details.cen-poz>summary .c{grid-row:auto;white-space:nowrap}
 @media (max-width:640px){details.cen-poz>summary{grid-template-columns:minmax(0,1fr) auto 18px;gap:10px}details.cen-poz>summary h3{font-size:16px}details.cen-poz .roz{padding-right:0}}
+/* ikony kafelków zabiegów (25.11) */
+.ik{display:block;width:64px;height:64px;color:var(--granat)}
+.ik .ak{stroke:var(--fuksja)}.ik .f{fill:var(--fuksja);stroke:none}
+.kafel .ikona{display:flex;align-items:center;justify-content:center;height:128px;background:linear-gradient(160deg,var(--jasny),#F4F8FC);border-bottom:1px solid var(--linia)}
+.kafel .ikona .ik{width:92px;height:92px;transition:transform .25s}
+a.kafel:hover .ikona .ik{transform:scale(1.06)}
+@media (max-width:640px){.kafel .ikona{height:112px}.kafel .ikona .ik{width:80px;height:80px}}
+/* obszary terapii na stronie głównej */
+.obszary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,24px)}
+.obsz{display:flex;flex-direction:column;background:#fff;border:1px solid var(--linia);border-radius:var(--r);padding:22px 22px 24px}
+.obsz .ikona.m{width:84px;height:84px;border-radius:50%;background:var(--jasny);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.obsz .ikona.m .ik{width:64px;height:64px}
+.obsz .tr{display:flex;flex-direction:column;flex:1}
+.obsz .nr{font:600 13px Jost,Inter,sans-serif;color:var(--nieb);margin-bottom:6px}
+.obsz h3{font-size:clamp(18px,1.6vw,20px);margin-bottom:8px}
+.obsz p{font-size:15px;color:var(--tekst2);margin:0 0 18px}
+.obsz .btn,.obsz details{margin-top:auto;align-self:flex-start}
+details.wybor{position:relative}
+details.wybor summary{list-style:none}
+details.wybor summary::-webkit-details-marker{display:none}
+details.wybor summary::after{content:"";width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin:-4px 0 0 4px;transition:transform .2s}
+details.wybor[open] summary::after{transform:rotate(-135deg);margin-top:4px}
+details.wybor>div{margin-top:8px;display:flex;flex-direction:column;border:1px solid var(--linia);border-radius:10px;overflow:hidden;background:#fff}
+details.wybor>div a{display:flex;justify-content:space-between;gap:12px;padding:12px 14px;text-decoration:none;color:var(--granat);font:500 15.5px/1.3 Jost,Inter,sans-serif;border-top:1px solid var(--linia)}
+details.wybor>div a:first-child{border-top:0}
+details.wybor>div a:hover{background:var(--szary);color:var(--nieb)}
+details.wybor>div a span{color:var(--fuksja)}
+@media (max-width:1000px){.obszary{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.obszary{grid-template-columns:1fr}.obsz{padding:18px}}
+.przyg{background:#fff;border-radius:18px;padding:clamp(18px,3vw,28px);border:1px solid var(--linia)}
+.przyg h3{font-size:clamp(18px,1.8vw,21px);margin-bottom:14px}
+.przyg .btns{flex-direction:column;align-items:stretch}
+/* profile, o nas */
+.profil .bio{margin:0 0 12px;font-size:15.5px;color:#E6EEF7}
+.profil .bio a{color:#fff}
+.podpis{margin-top:18px;color:var(--tekst2)}.podpis b{display:block;font:600 19px Jost,Inter,sans-serif;color:var(--granat)}
+/* wyróżnienia */
+.wyr{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start}
+.wyr-lista{margin:16px 0;padding-left:20px}.wyr-lista li{margin-bottom:10px}
+.wyr .koniec{font:500 17px/1.5 Jost,Inter,sans-serif;color:var(--granat)}
+.znaki{display:grid;gap:14px}
+.znak{display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;align-items:center;background:#fff;border:1px solid var(--linia);border-radius:var(--r);padding:12px}
+.znak .ph{min-height:0;padding:8px;font-size:12px}
+.znak b{display:block;font:600 17px/1.3 Jost,Inter,sans-serif;color:var(--granat)}
+.znak .kod{display:block;font-weight:600;color:var(--fuksja);margin:2px 0}
+.znak span{font-size:14.5px;color:var(--tekst2)}
+@media (max-width:860px){.wyr{grid-template-columns:1fr}}
+/* diagnostyka i wkładki */
+.wsk{padding-left:20px}.wsk li{margin-bottom:10px}
+.etapy.e3{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:34px}
+.etapy.e4{grid-template-columns:repeat(4,minmax(0,1fr));row-gap:34px}
+.etapy.e3 div,.etapy.e4 div{padding-right:22px}
+@media (max-width:900px){.etapy.e3,.etapy.e4{grid-template-columns:1fr;row-gap:0}}
+.pietra{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.pietra div{background:var(--szary);border-radius:12px;padding:18px}
+.pietra h3{font-size:17px}.pietra p{font-size:14.5px;color:var(--tekst2);margin:0}
+@media (max-width:1000px){.pietra{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.pietra{grid-template-columns:1fr}}
+.porown{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:stretch}
+.por.nasz{grid-column:1/-1;padding:clamp(20px,3vw,32px)}.por.nasz h3{font-size:clamp(19px,2vw,23px)}
+.por.nasz ul{columns:2;column-gap:40px}.por.nasz li{break-inside:avoid}
+@media (max-width:860px){.por.nasz ul{columns:1}}
+.por{background:#fff;border:1px solid var(--linia);border-radius:var(--r);padding:20px}
+.por h3{font-size:17.5px;margin-bottom:12px}
+.por ul{margin:0;padding-left:18px;font-size:14.5px;color:var(--tekst2)}.por li{margin-bottom:9px}
+.por li b{color:var(--granat)}
+.por.nasz{background:var(--granat);border-color:var(--granat);color:#D3DFEE}
+.por.nasz h3,.por.nasz li b{color:#fff}.por.nasz ul{color:#D3DFEE}
+@media (max-width:1000px){.porown{grid-template-columns:1fr}}
+@media (max-width:640px){.porown{grid-template-columns:1fr}}
+/* sklep: kod rabatowy */
+.kod{margin:0 0 14px}
+.kod label{display:block;font-size:14px;font-weight:600;color:var(--granat);margin-bottom:6px}
+.kod div{display:flex;gap:8px}
+.kod input{flex:1;min-width:0;font:16px Inter,sans-serif;padding:10px 12px;border:1px solid #B9C8D9;border-radius:10px;text-transform:uppercase}
+.kod .btn{min-height:44px;padding:8px 14px}
+.kod-msg{font-size:13.5px;color:var(--tekst2);margin:6px 0 0;min-height:1em}
+.koszyk .rabat{display:flex;justify-content:space-between;font-size:14.5px;color:var(--fuksja);margin-top:8px}
+/* mapa gabinetu */
+.mapa{border-radius:var(--r);overflow:hidden;border:1px solid var(--linia);aspect-ratio:4/3;background:var(--szary)}
+.mapa iframe{display:block;width:100%;height:100%;border:0}
+
+.sz .info3>div{background:#fff}
+details.wybor summary.btn.o:hover,details.wybor[open] summary.btn.o{background:var(--granat);color:#fff;border-color:var(--granat)}
 <style>
 .wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
 .wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
@@ -403,7 +487,7 @@ details.cen-poz>summary .c{grid-row:auto;white-space:nowrap}
 @media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
 </style>
 </style></head><body>
-<div class="mk">Makieta układu strony. Pola w paski to miejsca na nowe zdjęcia, teksty oznaczone na żółto są do uzupełnienia.</div>
+<div class="mk">Wersja robocza strony. Pola w paski to miejsca na zdjęcia, teksty oznaczone na żółto są do uzupełnienia.</div>
 <div class="top"><div class="w"><div class="tel"><a href="tel:+48503100341"><span>Podologia i dietetyka: </span>503 100 341</a><a href="tel:+48500138088"><span>Diagnostyka i wkładki: </span>500 138 088</a></div>
 <div class="dod"><a href="../sklep/">Sklep</a><a href="../blog/">Blog</a><a href="mailto:kontakt@plantaris.pl">kontakt@plantaris.pl</a></div></div></div>
 <header class="hdr"><div class="w"><a class="logo" href="../" aria-label="PLANTARIS, strona główna"><img src="../logo.png" width="400" height="120" alt="PLANTARIS diagnostyka i terapia stóp"></a>
@@ -412,9 +496,10 @@ details.cen-poz>summary .c{grid-row:auto;white-space:nowrap}
 <button class="burger" type="button" data-burger aria-controls="menu" aria-expanded="false" aria-label="Otwórz menu"><span></span></button></div></header>
 <main><section class="ph-head"><div class="w" style="display:block;padding:0"><nav class="okr" aria-label="Jesteś tutaj"><a href="../">Strona główna</a> / Wkładki</nav></div>
 <div class="w"><div><h1>Indywidualne wkładki ortopedyczne w Tychach i Woli</h1><p class="lead">Wkładki dobrane na podstawie badania stóp i wykonane dla konkretnego pacjenta.</p><div class="btns"><a class="btn" href="../umow-wizyte/#lukasz">Umów badanie</a><a class="btn o" href="tel:+48500138088">Zadzwoń: 500 138 088</a></div></div><div class="ph r32 c" role="img" aria-label="Miejsce na zdjęcie: wkładka ortopedyczna w dłoniach, na tle stopy"><div><b>tu zdjęcie</b>wkładka ortopedyczna w dłoniach, na tle stopy</div></div></div></section>
-<section class="sek"><div class="w"><h2>Jak powstają wkładki</h2><div class="etapy"><div><h3>Badanie</h3><p>Diagnostyka stóp i wywiad.</p></div><div><h3>Dobór rozwiązania</h3><p>Rodzaj wkładki, materiał, korekcja.</p></div><div><h3>Wykonanie i dopasowanie</h3><p>Wkładka wykonana indywidualnie i dopasowana do obuwia.</p></div><div><h3>Zalecenia</h3><p>Jak nosić i jak dbać o wkładki.</p></div><div><h3>Kontrola</h3><p>Wizyta kontrolna i ewentualna korekta.</p></div></div><p style="color:var(--tekst2);font-size:15px">Opis technologii zgodny z tym, co rzeczywiście wykonujemy <span class="uz">[do potwierdzenia przez Łukasza]</span>.</p></div></section>
-<section class="sek sz"><div class="w"><h2>Dla kogo i jakie rozwiązania</h2><div class="siatka k4"><article class="kafel"><div class="ph r43" role="img" aria-label="Miejsce na zdjęcie: Dla dorosłych"><div><b>tu zdjęcie</b>Dla dorosłych</div></div><div class="tr"><h3>Dla dorosłych</h3><p><span class="uz">[dla kogo, z czego]</span></p><div class="meta"><span><b>350-450 zł</b></span></div></div></article><article class="kafel"><div class="ph r43" role="img" aria-label="Miejsce na zdjęcie: Dla dzieci, sensoryczne"><div><b>tu zdjęcie</b>Dla dzieci, sensoryczne</div></div><div class="tr"><h3>Dla dzieci, sensoryczne</h3><p><span class="uz">[dla kogo, z czego]</span></p><div class="meta"><span><b>450 zł</b></span></div></div></article><article class="kafel"><div class="ph r43" role="img" aria-label="Miejsce na zdjęcie: Odciążające"><div><b>tu zdjęcie</b>Odciążające</div></div><div class="tr"><h3>Odciążające</h3><p><span class="uz">[dla kogo, z czego]</span></p><div class="meta"><span><b>180 zł</b></span></div></div></article><article class="kafel"><div class="ph r43" role="img" aria-label="Miejsce na zdjęcie: W chorobach metabolicznych"><div><b>tu zdjęcie</b>W chorobach metabolicznych</div></div><div class="tr"><h3>W chorobach metabolicznych</h3><p><span class="uz">[dla kogo, z czego]</span></p><div class="meta"><span><b>600 zł</b></span></div></div></article></div></div></section>
-<section class="sek"><div class="w dwa"><div><h2>Zapisy na badanie i wkładki</h2><p>Telefon w sprawie diagnostyki i wkładek: <a href="tel:+48500138088">500 138 088</a>. Rezerwacja w gabinecie w Tychach lub w Woli.</p><div class="btns"><a class="btn" href="https://www.halodoctor.pl/lekarze/lukasz-trzepiecinski-specjalista-polska" target="_blank" rel="noopener">Rezerwacja: HaloDoctor</a><a class="btn o" href="https://rejestracja.medfile.pl/register/catalog/?uuid=08df65a6-e39d-a68d-3ffb-6508af1e03f0" target="_blank" rel="noopener">Medfile</a></div>
+<section class="sek"><div class="w"><h2>Jak powstają wkładki</h2><div class="etapy e4"><div><h3>Badanie ortopodologiczne</h3><p>Wykonanie wkładek zawsze poprzedza szczegółowe badanie ortopodologiczne oraz wywiad.</p></div><div><h3>Odbitka stopy na planturografie w statyce i dynamice</h3><p>Odbicie stopy jest bardzo ważne podczas planowania elementów korygujących, tj. odciążenia miejsc przeciążeniowych, dociążenia przy braku kontaktu części stopy z podłożem.</p></div><div><h3>Dobór rozwiązania</h3><p>Z jakich materiałów będzie zrobiona wkładka, z jakiej formy i jakim sposobem, jakie elementy korygujące.</p></div><div><h3>Produkcja</h3><p>Uformowaną wkładkę szlifujemy, aby uzyskać pożądaną korekcję i estetyczne wykończenie. Wyprodukowanie Twoich wkładek trwa około 2 tygodnie (w tym czasie łączy się poszczególne elementy, skleja materiały i pozwala „odleżeć”, zanim trafią na Twoje stopy).</p></div><div><h3>Dopasowanie</h3><p>Wkładki dopasowujemy ZAWSZE do stopy, nie do butów, w których lubisz chodzić. Wyjątek stanowią wkładki ortopedyczne, jeśli ze względu na wskazania musisz mieć specjalne obuwie ortopedyczne.</p></div><div><h3>Zalecenia</h3><p>Jak nosić, jak dbać, jak konserwować swoje wkładki.</p></div><div><h3>Czas na przyzwyczajenie i ewentualne korekty</h3><p>Twoje wkładki są indywidualne, muszą pasować, muszą spełniać swoją funkcję; ewentualny ból, dyskomfort powinien minąć maksymalnie do 2 tygodni.</p></div><div><h3>Wizyta kontrolna</h3><p>Ustalana podczas odbioru wkładek - jest indywidualnie ustalana ze Specjalistą.</p></div></div></div></section>
+<section class="sek sz"><div class="w"><h2>Czym różnią się wkładki PLANTARIS i ORTOSIC od innych wkładek na rynku?</h2><h3 style="font-size:clamp(18px,1.8vw,21px);font-weight:500">Czym różnią się wkładki ze sklepu od indywidualnych wkładek Plantaris i Ortosic?</h3><p class="lead" style="margin-bottom:26px">Na rynku dostępnych jest wiele rozwiązań, ale nie każde realnie wspiera stopę i cały układ ruchu. Zobacz, jakie są główne różnice.</p><div class="porown"><div class="por"><h3>Gotowe wkładki ze sklepu ortopedycznego lub internetu</h3><ul><li><b>Robione „pod wadę”, nie pod Ciebie:</b> Powstają masowo pod ogólny schemat, a nie pod konkretną stopę.</li><li><b>Bez badania Twojego ciała:</b> Osoba projektująca wkładkę nie widzi, jak chodzisz, jak ustawia się staw skokowy czy kolanowy i jak stopa wpływa na resztę ciała.</li><li><b>Ryzyko zbyt słabej lub zbyt mocnej korekcji:</b> Nieodpowiednio dobrana wkładka może nie pomóc, a w niektórych przypadkach utrwalać lub pogłębiać problem.</li></ul></div><div class="por"><h3>Wkładki formowane bezpośrednio w bucie</h3><ul><li><b>Powielają kształt deformacji:</b> Wkładka odciska to, co dzieje się na stopie - w tym jej nieprawidłowe ustawienie.</li><li><b>But narzuca kształt:</b> Wysokość obcasa, szerokość czy kształt podeszwy w palcach wpływają na to, jak uformuje się wkładka.</li><li><b>Pułapka zużytego obuwia:</b> W wyrobionym, krzywym lub nierówno znoszonym bucie taka wkładka łatwo utrwala złe nawyki.</li></ul></div><div class="por"><h3>Wkładki frezowane z pianki i wysyłane do wykonania przez zakład produkcyjny</h3><ul><li><b>Łatwo o przypadkowy błąd podczas odcisku:</b> Wystarczy, że pacjent mocniej dociśnie stopę do pianki albo ustawi ją tak, żeby było „wygodniej” w danej chwili.</li><li><b>Odbitka to nie pozycja skorygowana:</b> Dokładny odcisk pokazuje aktualne ułożenie, ale nie zawsze oznacza ustawienie, do którego dążymy w terapii.</li><li><b>Brak bieżącej korekty z udziałem pacjenta:</b> Maszyna wycina gotowy projekt, ale sama wkładka nie jest od razu dopasowywana na żywo do odczuć w trakcie przymiarki.</li></ul></div><div class="por nasz"><h3>Indywidualne wkładki Plantaris i Ortosic w naszym gabinecie</h3><ul><li><b>Najpierw badanie, potem wkładka:</b> Pracujemy po badaniu funkcjonalnym i oceniamy efekty, zamiast zgadywać, czego potrzebuje Twoja stopa.</li><li><b>Odcisk w piance TYLKO w pozycji skorygowanej:</b> Zależy nam na tym, by nie utrwalać wady, tylko dać stopie przestrzeń do nauki lepszych, zdrowszych wzorców ruchu.</li><li>Wykonanie wkładki na podstawie obliczeń z platformy tensometrycznej, odbicia faktycznego stopy i podczas, co ważne, DYNAMIKI chodu; wkładki są dynamiczne podczas Twojego ruchu, nie wykonane, jak stoisz czy siedzisz.</li><li><b>Jeden zespół od początku do końca:</b> Ten sam specjalista, który bada i diagnozuje, odpowiada za stworzenie wkładki - nic nie gubi się po drodze.</li><li><b>Możliwość wielokrotnego przeformowywania:</b> Wkładkę możemy korygować i dopasowywać tak długo, aż osiągniemy zamierzony efekt i będzie ona dla Ciebie w pełni akceptowalna.</li><li><b>Liczy się to, jak czujesz wkładkę w bucie:</b> Od razu sprawdzasz ją w swoim obuwiu i mówisz o swoich odczuciach - na tej podstawie dopracowujemy dopasowanie na bieżąco.</li></ul></div></div></div></section>
+<section class="sek"><div class="w"><h2>Dla kogo i jakie rozwiązania</h2><div class="siatka k4"><article class="kafel"><div class="ph r43" role="img" aria-label="Miejsce na zdjęcie: Dla dorosłych"><div><b>tu zdjęcie</b>Dla dorosłych</div></div><div class="tr"><h3>Dla dorosłych</h3><p><span class="uz">[dla kogo, z czego]</span></p><div class="meta"><span><b>350-450 zł</b></span></div></div></article><article class="kafel"><div class="ph r43" role="img" aria-label="Miejsce na zdjęcie: Dla dzieci, sensoryczne"><div><b>tu zdjęcie</b>Dla dzieci, sensoryczne</div></div><div class="tr"><h3>Dla dzieci, sensoryczne</h3><p><span class="uz">[dla kogo, z czego]</span></p><div class="meta"><span><b>450 zł</b></span></div></div></article><article class="kafel"><div class="ph r43" role="img" aria-label="Miejsce na zdjęcie: Odciążające"><div><b>tu zdjęcie</b>Odciążające</div></div><div class="tr"><h3>Odciążające</h3><p><span class="uz">[dla kogo, z czego]</span></p><div class="meta"><span><b>180 zł</b></span></div></div></article><article class="kafel"><div class="ph r43" role="img" aria-label="Miejsce na zdjęcie: W chorobach metabolicznych"><div><b>tu zdjęcie</b>W chorobach metabolicznych</div></div><div class="tr"><h3>W chorobach metabolicznych</h3><p><span class="uz">[dla kogo, z czego]</span></p><div class="meta"><span><b>600 zł</b></span></div></div></article></div></div></section>
+<section class="sek sz"><div class="w dwa"><div><h2>Zapisy na badanie i wkładki</h2><p>Telefon w sprawie diagnostyki i wkładek: <a href="tel:+48500138088">500 138 088</a>. Rezerwacja w gabinecie w Tychach lub w Woli.</p><div class="btns"><a class="btn" href="https://www.halodoctor.pl/lekarze/lukasz-trzepiecinski-specjalista-polska" target="_blank" rel="noopener">Rezerwacja: HaloDoctor</a><a class="btn o" href="https://rejestracja.medfile.pl/register/catalog/?uuid=08df65a6-e39d-a68d-3ffb-6508af1e03f0" target="_blank" rel="noopener">Medfile</a></div>
 <p style="margin-top:16px"><a href="../diagnostyka-stop/">Diagnostyka stóp: przebieg i przygotowanie</a></p></div><div class="ph r32" role="img" aria-label="Miejsce na zdjęcie: Łukasz przy wykonywaniu wkładki"><div><b>tu zdjęcie</b>Łukasz przy wykonywaniu wkładki</div></div></div></section></main>
 <footer class="stopka"><div class="w">
 <div><img src="../logo.png" width="180" height="54" alt="PLANTARIS" style="background:#fff;border-radius:8px;padding:6px 8px;margin-bottom:12px"><p>Podologia, diagnostyka stóp, wkładki ortopedyczne i dietetyka kliniczna w Tychach i w Woli. Wizyty po wcześniejszym umówieniu.</p></div>

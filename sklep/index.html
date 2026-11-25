@@ -390,6 +390,90 @@ details.cen-poz .roz .cz{font-size:14.5px}
 @media (max-width:860px){.profil,.profil.odw{grid-template-columns:1fr}.profil .ph.r45{aspect-ratio:4/3}.metr{grid-template-columns:repeat(3,minmax(0,1fr))}.metr div{padding:8px;font-size:12.5px}}
 details.cen-poz>summary .c{grid-row:auto;white-space:nowrap}
 @media (max-width:640px){details.cen-poz>summary{grid-template-columns:minmax(0,1fr) auto 18px;gap:10px}details.cen-poz>summary h3{font-size:16px}details.cen-poz .roz{padding-right:0}}
+/* ikony kafelków zabiegów (25.11) */
+.ik{display:block;width:64px;height:64px;color:var(--granat)}
+.ik .ak{stroke:var(--fuksja)}.ik .f{fill:var(--fuksja);stroke:none}
+.kafel .ikona{display:flex;align-items:center;justify-content:center;height:128px;background:linear-gradient(160deg,var(--jasny),#F4F8FC);border-bottom:1px solid var(--linia)}
+.kafel .ikona .ik{width:92px;height:92px;transition:transform .25s}
+a.kafel:hover .ikona .ik{transform:scale(1.06)}
+@media (max-width:640px){.kafel .ikona{height:112px}.kafel .ikona .ik{width:80px;height:80px}}
+/* obszary terapii na stronie głównej */
+.obszary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,24px)}
+.obsz{display:flex;flex-direction:column;background:#fff;border:1px solid var(--linia);border-radius:var(--r);padding:22px 22px 24px}
+.obsz .ikona.m{width:84px;height:84px;border-radius:50%;background:var(--jasny);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.obsz .ikona.m .ik{width:64px;height:64px}
+.obsz .tr{display:flex;flex-direction:column;flex:1}
+.obsz .nr{font:600 13px Jost,Inter,sans-serif;color:var(--nieb);margin-bottom:6px}
+.obsz h3{font-size:clamp(18px,1.6vw,20px);margin-bottom:8px}
+.obsz p{font-size:15px;color:var(--tekst2);margin:0 0 18px}
+.obsz .btn,.obsz details{margin-top:auto;align-self:flex-start}
+details.wybor{position:relative}
+details.wybor summary{list-style:none}
+details.wybor summary::-webkit-details-marker{display:none}
+details.wybor summary::after{content:"";width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin:-4px 0 0 4px;transition:transform .2s}
+details.wybor[open] summary::after{transform:rotate(-135deg);margin-top:4px}
+details.wybor>div{margin-top:8px;display:flex;flex-direction:column;border:1px solid var(--linia);border-radius:10px;overflow:hidden;background:#fff}
+details.wybor>div a{display:flex;justify-content:space-between;gap:12px;padding:12px 14px;text-decoration:none;color:var(--granat);font:500 15.5px/1.3 Jost,Inter,sans-serif;border-top:1px solid var(--linia)}
+details.wybor>div a:first-child{border-top:0}
+details.wybor>div a:hover{background:var(--szary);color:var(--nieb)}
+details.wybor>div a span{color:var(--fuksja)}
+@media (max-width:1000px){.obszary{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.obszary{grid-template-columns:1fr}.obsz{padding:18px}}
+.przyg{background:#fff;border-radius:18px;padding:clamp(18px,3vw,28px);border:1px solid var(--linia)}
+.przyg h3{font-size:clamp(18px,1.8vw,21px);margin-bottom:14px}
+.przyg .btns{flex-direction:column;align-items:stretch}
+/* profile, o nas */
+.profil .bio{margin:0 0 12px;font-size:15.5px;color:#E6EEF7}
+.profil .bio a{color:#fff}
+.podpis{margin-top:18px;color:var(--tekst2)}.podpis b{display:block;font:600 19px Jost,Inter,sans-serif;color:var(--granat)}
+/* wyróżnienia */
+.wyr{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start}
+.wyr-lista{margin:16px 0;padding-left:20px}.wyr-lista li{margin-bottom:10px}
+.wyr .koniec{font:500 17px/1.5 Jost,Inter,sans-serif;color:var(--granat)}
+.znaki{display:grid;gap:14px}
+.znak{display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;align-items:center;background:#fff;border:1px solid var(--linia);border-radius:var(--r);padding:12px}
+.znak .ph{min-height:0;padding:8px;font-size:12px}
+.znak b{display:block;font:600 17px/1.3 Jost,Inter,sans-serif;color:var(--granat)}
+.znak .kod{display:block;font-weight:600;color:var(--fuksja);margin:2px 0}
+.znak span{font-size:14.5px;color:var(--tekst2)}
+@media (max-width:860px){.wyr{grid-template-columns:1fr}}
+/* diagnostyka i wkładki */
+.wsk{padding-left:20px}.wsk li{margin-bottom:10px}
+.etapy.e3{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:34px}
+.etapy.e4{grid-template-columns:repeat(4,minmax(0,1fr));row-gap:34px}
+.etapy.e3 div,.etapy.e4 div{padding-right:22px}
+@media (max-width:900px){.etapy.e3,.etapy.e4{grid-template-columns:1fr;row-gap:0}}
+.pietra{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.pietra div{background:var(--szary);border-radius:12px;padding:18px}
+.pietra h3{font-size:17px}.pietra p{font-size:14.5px;color:var(--tekst2);margin:0}
+@media (max-width:1000px){.pietra{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.pietra{grid-template-columns:1fr}}
+.porown{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:stretch}
+.por.nasz{grid-column:1/-1;padding:clamp(20px,3vw,32px)}.por.nasz h3{font-size:clamp(19px,2vw,23px)}
+.por.nasz ul{columns:2;column-gap:40px}.por.nasz li{break-inside:avoid}
+@media (max-width:860px){.por.nasz ul{columns:1}}
+.por{background:#fff;border:1px solid var(--linia);border-radius:var(--r);padding:20px}
+.por h3{font-size:17.5px;margin-bottom:12px}
+.por ul{margin:0;padding-left:18px;font-size:14.5px;color:var(--tekst2)}.por li{margin-bottom:9px}
+.por li b{color:var(--granat)}
+.por.nasz{background:var(--granat);border-color:var(--granat);color:#D3DFEE}
+.por.nasz h3,.por.nasz li b{color:#fff}.por.nasz ul{color:#D3DFEE}
+@media (max-width:1000px){.porown{grid-template-columns:1fr}}
+@media (max-width:640px){.porown{grid-template-columns:1fr}}
+/* sklep: kod rabatowy */
+.kod{margin:0 0 14px}
+.kod label{display:block;font-size:14px;font-weight:600;color:var(--granat);margin-bottom:6px}
+.kod div{display:flex;gap:8px}
+.kod input{flex:1;min-width:0;font:16px Inter,sans-serif;padding:10px 12px;border:1px solid #B9C8D9;border-radius:10px;text-transform:uppercase}
+.kod .btn{min-height:44px;padding:8px 14px}
+.kod-msg{font-size:13.5px;color:var(--tekst2);margin:6px 0 0;min-height:1em}
+.koszyk .rabat{display:flex;justify-content:space-between;font-size:14.5px;color:var(--fuksja);margin-top:8px}
+/* mapa gabinetu */
+.mapa{border-radius:var(--r);overflow:hidden;border:1px solid var(--linia);aspect-ratio:4/3;background:var(--szary)}
+.mapa iframe{display:block;width:100%;height:100%;border:0}
+
+.sz .info3>div{background:#fff}
+details.wybor summary.btn.o:hover,details.wybor[open] summary.btn.o{background:var(--granat);color:#fff;border-color:var(--granat)}
 <style>
 .wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
 .wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
@@ -403,7 +487,7 @@ details.cen-poz>summary .c{grid-row:auto;white-space:nowrap}
 @media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
 </style>
 </style></head><body>
-<div class="mk">Makieta układu strony. Pola w paski to miejsca na nowe zdjęcia, teksty oznaczone na żółto są do uzupełnienia.</div>
+<div class="mk">Wersja robocza strony. Pola w paski to miejsca na zdjęcia, teksty oznaczone na żółto są do uzupełnienia.</div>
 <div class="top"><div class="w"><div class="tel"><a href="tel:+48503100341"><span>Podologia i dietetyka: </span>503 100 341</a><a href="tel:+48500138088"><span>Diagnostyka i wkładki: </span>500 138 088</a></div>
 <div class="dod"><a href="../sklep/">Sklep</a><a href="../blog/">Blog</a><a href="mailto:kontakt@plantaris.pl">kontakt@plantaris.pl</a></div></div></div>
 <header class="hdr"><div class="w"><a class="logo" href="../" aria-label="PLANTARIS, strona główna"><img src="../logo.png" width="400" height="120" alt="PLANTARIS diagnostyka i terapia stóp"></a>
@@ -413,8 +497,9 @@ details.cen-poz>summary .c{grid-row:auto;white-space:nowrap}
 <main><section class="ph-head"><div class="w" style="display:block;padding:0"><nav class="okr" aria-label="Jesteś tutaj"><a href="../">Strona główna</a> / Sklep</nav></div>
 <div class="w"><div><h1>Sklep: e-booki, szkolenia i bony</h1><p class="lead">Zamówienie przez koszyk, płatność zwykłym przelewem. Po zamówieniu dostajesz podsumowanie z numerem rachunku, tytułem, kwotą i terminem płatności.</p></div><div class="ph r32 c" role="img" aria-label="Miejsce na zdjęcie: e-booki i bony podarunkowe"><div><b>tu zdjęcie</b>e-booki i bony podarunkowe</div></div></div></section>
 <section class="sek"><div class="w sklep"><div><div class="filtry"><button class="akt" data-f="">Wszystko</button><button data-f="ebook">E-booki</button><button data-f="szkolenie">Szkolenia</button><button data-f="bon">Bony</button></div><div class="siatka k3"><article class="kafel prod" data-r="ebook"><div class="ph r43" role="img" aria-label="Miejsce na zdjęcie: E-book: pielęgnacja stóp w cukrzycy"><div><b>tu zdjęcie</b>E-book: pielęgnacja stóp w cukrzycy<small>okładka lub zdjęcie produktu</small></div></div><div class="tr"><span class="tag">e-book</span><h3>E-book: pielęgnacja stóp w cukrzycy</h3><p>Plik PDF wysyłany mailem po zaksięgowaniu wpłaty.</p><div class="cena">49 zł</div><button class="btn" type="button" data-dodaj="0" data-n="E-book: pielęgnacja stóp w cukrzycy" data-c="49">Dodaj do koszyka</button></div></article><article class="kafel prod" data-r="ebook"><div class="ph r43" role="img" aria-label="Miejsce na zdjęcie: E-book: wrastające paznokcie, profilaktyka"><div><b>tu zdjęcie</b>E-book: wrastające paznokcie, profilaktyka<small>okładka lub zdjęcie produktu</small></div></div><div class="tr"><span class="tag">e-book</span><h3>E-book: wrastające paznokcie, profilaktyka</h3><p>Plik PDF wysyłany mailem po zaksięgowaniu wpłaty.</p><div class="cena">39 zł</div><button class="btn" type="button" data-dodaj="1" data-n="E-book: wrastające paznokcie, profilaktyka" data-c="39">Dodaj do koszyka</button></div></article><article class="kafel prod" data-r="szkolenie"><div class="ph r43" role="img" aria-label="Miejsce na zdjęcie: Szkolenie: brodawki wirusowe (16.01.2027)"><div><b>tu zdjęcie</b>Szkolenie: brodawki wirusowe (16.01.2027)<small>okładka lub zdjęcie produktu</small></div></div><div class="tr"><span class="tag">szkolenie</span><h3>Szkolenie: brodawki wirusowe (16.01.2027)</h3><p>Płatność przelewem w ciągu 7 dni od zamówienia.</p><div class="cena">1 200 zł</div><button class="btn" type="button" data-dodaj="2" data-n="Szkolenie: brodawki wirusowe (16.01.2027)" data-c="1200">Dodaj do koszyka</button></div></article><article class="kafel prod" data-r="szkolenie"><div class="ph r43" role="img" aria-label="Miejsce na zdjęcie: Szkolenie online: choroby skóry stóp i paznokci"><div><b>tu zdjęcie</b>Szkolenie online: choroby skóry stóp i paznokci<small>okładka lub zdjęcie produktu</small></div></div><div class="tr"><span class="tag">szkolenie</span><h3>Szkolenie online: choroby skóry stóp i paznokci</h3><p>Dostęp przesyłany po zaksięgowaniu wpłaty.</p><div class="cena">690 zł</div><button class="btn" type="button" data-dodaj="3" data-n="Szkolenie online: choroby skóry stóp i paznokci" data-c="690">Dodaj do koszyka</button></div></article><article class="kafel prod" data-r="bon"><div class="ph r43" role="img" aria-label="Miejsce na zdjęcie: Bon podarunkowy na kwotę"><div><b>tu zdjęcie</b>Bon podarunkowy na kwotę<small>okładka lub zdjęcie produktu</small></div></div><div class="tr"><span class="tag">bon podarunkowy</span><h3>Bon podarunkowy na kwotę</h3><p>Bon PDF do wydrukowania lub wysłania.</p><div class="cena">od 100 zł</div><button class="btn" type="button" data-dodaj="4" data-n="Bon podarunkowy na kwotę" data-c="100">Dodaj do koszyka</button></div></article><article class="kafel prod" data-r="bon"><div class="ph r43" role="img" aria-label="Miejsce na zdjęcie: Bon podarunkowy na zabieg podologiczny"><div><b>tu zdjęcie</b>Bon podarunkowy na zabieg podologiczny<small>okładka lub zdjęcie produktu</small></div></div><div class="tr"><span class="tag">bon podarunkowy</span><h3>Bon podarunkowy na zabieg podologiczny</h3><p>Bon PDF do wydrukowania lub wysłania.</p><div class="cena">180 zł</div><button class="btn" type="button" data-dodaj="5" data-n="Bon podarunkowy na zabieg podologiczny" data-c="180">Dodaj do koszyka</button></div></article></div>
-<p style="color:var(--tekst2);font-size:14px;margin-top:16px">Produkty i ceny w makiecie są przykładowe. Produkty dodaje się samodzielnie w panelu.</p></div>
+<p style="color:var(--tekst2);font-size:14px;margin-top:16px">Produkty i ceny są przykładowe. Produkty i kody rabatowe (od 20 do 100%, np. e-book w podziękowaniu za opinię) dodaje się samodzielnie w panelu. Do sprawdzenia: kody OPINIA20 i PREZENT100.</p></div>
 <aside><div class="koszyk"><h3>Koszyk</h3><div id="ko"></div>
+<form class="kod" id="kod" style="display:none"><label for="kod-in">Kod rabatowy</label><div><input id="kod-in" autocomplete="off" placeholder="np. OPINIA20"><button class="btn o" type="submit">Zastosuj</button></div><p class="kod-msg" id="kod-msg" aria-live="polite"></p></form>
 <form class="fm" id="zam" style="grid-template-columns:1fr;display:none"><label>Imię<input required></label><label>Nazwisko<input required></label><label>E-mail<input type="email" required></label><label>Telefon<input type="tel"></label><label class="zgoda"><input type="checkbox" required> Akceptuję regulamin sklepu.</label><button class="btn">Zamawiam z obowiązkiem zapłaty</button></form>
 <div id="potw"></div></div></aside></div></section></main>
 <footer class="stopka"><div class="w">
@@ -435,10 +520,12 @@ document.querySelectorAll('.zaslona button').forEach(b=>b.addEventListener('clic
 document.querySelectorAll('[data-karuz]').forEach(t=>{const kr=()=>t.firstElementChild.getBoundingClientRect().width+16;const ruch=k=>{const max=t.scrollWidth-t.clientWidth-4;t.scrollTo({left:k>0&&t.scrollLeft>=max?0:t.scrollLeft+k*kr(),behavior:'smooth'})};t.parentElement.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>ruch(+b.dataset.k));let st=false;t.addEventListener('mouseenter',()=>st=true);t.addEventListener('mouseleave',()=>st=false);t.addEventListener('touchstart',()=>st=true,{passive:true});if(!matchMedia('(prefers-reduced-motion: reduce)').matches)setInterval(()=>{if(!st)ruch(1)},5000)});
 document.querySelectorAll('form[data-demo]').forEach(f=>f.addEventListener('submit',ev=>{ev.preventDefault();const m=f.parentElement.querySelector('.msg');if(m){m.classList.add('on');m.scrollIntoView({block:'nearest'})}}));
 
-let K=[];const ko=document.getElementById('ko'),zam=document.getElementById('zam'),potw=document.getElementById('potw');
-function pok(){if(!K.length){ko.innerHTML='<p class="pusty">Koszyk jest pusty.</p>';zam.style.display='none';return}const s=K.reduce((a,x)=>a+x.c,0);ko.innerHTML='<ul>'+K.map((x,i)=>`<li><span>${x.n}</span><span>${x.c} zł <button type="button" data-u="${i}">usuń</button></span></li>`).join('')+`</ul><div class="suma"><span>Razem</span><span>${s} zł</span></div>`;zam.style.display='grid';ko.querySelectorAll('[data-u]').forEach(b=>b.onclick=()=>{K.splice(+b.dataset.u,1);pok()})}
+let K=[],R=0;const KODY={OPINIA20:20,PREZENT100:100};const ko=document.getElementById('ko'),zam=document.getElementById('zam'),potw=document.getElementById('potw'),kod=document.getElementById('kod'),km=document.getElementById('kod-msg');
+const zl=v=>Number.isInteger(v)?String(v):v.toFixed(2).replace('.',',');const suma=()=>{const s=K.reduce((a,x)=>a+x.c,0);return Math.round(s*(100-R))/100};
+function pok(){if(!K.length){ko.innerHTML='<p class="pusty">Koszyk jest pusty.</p>';zam.style.display='none';kod.style.display='none';return}const s=K.reduce((a,x)=>a+x.c,0);ko.innerHTML='<ul>'+K.map((x,i)=>`<li><span>${x.n}</span><span>${x.c} zł <button type="button" data-u="${i}">usuń</button></span></li>`).join('')+'</ul>'+(R?`<div class="rabat"><span>Rabat ${R}%</span><span>-${zl(Math.round(s*R)/100)} zł</span></div>`:'')+`<div class="suma"><span>Razem</span><span>${zl(suma())} zł</span></div>`;zam.style.display='grid';kod.style.display='block';ko.querySelectorAll('[data-u]').forEach(b=>b.onclick=()=>{K.splice(+b.dataset.u,1);pok()})}
 document.querySelectorAll('[data-dodaj]').forEach(b=>b.onclick=()=>{K.push({n:b.dataset.n,c:+b.dataset.c});potw.innerHTML='';pok()});
 document.querySelectorAll('.filtry button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.filtry button').forEach(x=>x.classList.toggle('akt',x==b));document.querySelectorAll('.prod').forEach(p=>p.style.display=!b.dataset.f||p.dataset.r==b.dataset.f?'':'none')});
-zam.onsubmit=ev=>{ev.preventDefault();const s=K.reduce((a,x)=>a+x.c,0);const d=new Date();d.setDate(d.getDate()+7);potw.innerHTML=`<div class="potw"><b>Dziękujemy, zamówienie nr 2027/0001 przyjęte.</b><p style="margin:8px 0">To samo podsumowanie przychodzi mailem do klienta i do gabinetu.</p><table><tr><td>Kwota</td><td><b>${s} zł</b></td></tr><tr><td>Rachunek</td><td>[numer rachunku gabinetu]</td></tr><tr><td>Tytuł</td><td>Zamówienie 2027/0001</td></tr><tr><td>Termin</td><td>7 dni, do ${d.toLocaleDateString('pl-PL')} (ustawiany w panelu)</td></tr><tr><td>Kontakt</td><td>kontakt@plantaris.pl</td></tr></table><p style="margin:8px 0 0;font-size:13.5px">Makieta: zamówienie nie jest nigdzie wysyłane.</p></div>`;K=[];pok()};pok();
+kod.onsubmit=ev=>{ev.preventDefault();const c=document.getElementById('kod-in').value.trim().toUpperCase();if(KODY[c]){R=KODY[c];km.textContent='Kod przyjęty: rabat '+R+'%.'}else{R=0;km.textContent='Nieprawidłowy kod.'}pok()};
+zam.onsubmit=ev=>{ev.preventDefault();const s=suma();const d=new Date();d.setDate(d.getDate()+7);if(s===0){potw.innerHTML=`<div class="potw"><b>Dziękujemy, zamówienie nr 2027/0001 przyjęte.</b><p style="margin:8px 0 0">Zamówienie z rabatem 100%: bez płatności. E-book przychodzi mailem, a gabinet dostaje powiadomienie o zamówieniu.</p></div>`;K=[];R=0;pok();return}potw.innerHTML=`<div class="potw"><b>Dziękujemy, zamówienie nr 2027/0001 przyjęte.</b><p style="margin:8px 0">To samo podsumowanie przychodzi mailem do klienta i do gabinetu.</p><table><tr><td>Kwota</td><td><b>${zl(s)} zł</b></td></tr><tr><td>Rachunek</td><td>[numer rachunku gabinetu]</td></tr><tr><td>Tytuł</td><td>Zamówienie 2027/0001</td></tr><tr><td>Termin</td><td>7 dni, do ${d.toLocaleDateString('pl-PL')} (ustawiany w panelu)</td></tr><tr><td>Kontakt</td><td>kontakt@plantaris.pl</td></tr></table><p style="margin:8px 0 0;font-size:13.5px">Wersja robocza: zamówienie nie jest nigdzie wysyłane.</p></div>`;K=[];R=0;pok()};pok();
 </script>
 </body></html>

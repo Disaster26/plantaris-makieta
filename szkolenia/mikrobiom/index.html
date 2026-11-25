@@ -390,6 +390,90 @@ details.cen-poz .roz .cz{font-size:14.5px}
 @media (max-width:860px){.profil,.profil.odw{grid-template-columns:1fr}.profil .ph.r45{aspect-ratio:4/3}.metr{grid-template-columns:repeat(3,minmax(0,1fr))}.metr div{padding:8px;font-size:12.5px}}
 details.cen-poz>summary .c{grid-row:auto;white-space:nowrap}
 @media (max-width:640px){details.cen-poz>summary{grid-template-columns:minmax(0,1fr) auto 18px;gap:10px}details.cen-poz>summary h3{font-size:16px}details.cen-poz .roz{padding-right:0}}
+/* ikony kafelków zabiegów (25.11) */
+.ik{display:block;width:64px;height:64px;color:var(--granat)}
+.ik .ak{stroke:var(--fuksja)}.ik .f{fill:var(--fuksja);stroke:none}
+.kafel .ikona{display:flex;align-items:center;justify-content:center;height:128px;background:linear-gradient(160deg,var(--jasny),#F4F8FC);border-bottom:1px solid var(--linia)}
+.kafel .ikona .ik{width:92px;height:92px;transition:transform .25s}
+a.kafel:hover .ikona .ik{transform:scale(1.06)}
+@media (max-width:640px){.kafel .ikona{height:112px}.kafel .ikona .ik{width:80px;height:80px}}
+/* obszary terapii na stronie głównej */
+.obszary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,24px)}
+.obsz{display:flex;flex-direction:column;background:#fff;border:1px solid var(--linia);border-radius:var(--r);padding:22px 22px 24px}
+.obsz .ikona.m{width:84px;height:84px;border-radius:50%;background:var(--jasny);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.obsz .ikona.m .ik{width:64px;height:64px}
+.obsz .tr{display:flex;flex-direction:column;flex:1}
+.obsz .nr{font:600 13px Jost,Inter,sans-serif;color:var(--nieb);margin-bottom:6px}
+.obsz h3{font-size:clamp(18px,1.6vw,20px);margin-bottom:8px}
+.obsz p{font-size:15px;color:var(--tekst2);margin:0 0 18px}
+.obsz .btn,.obsz details{margin-top:auto;align-self:flex-start}
+details.wybor{position:relative}
+details.wybor summary{list-style:none}
+details.wybor summary::-webkit-details-marker{display:none}
+details.wybor summary::after{content:"";width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin:-4px 0 0 4px;transition:transform .2s}
+details.wybor[open] summary::after{transform:rotate(-135deg);margin-top:4px}
+details.wybor>div{margin-top:8px;display:flex;flex-direction:column;border:1px solid var(--linia);border-radius:10px;overflow:hidden;background:#fff}
+details.wybor>div a{display:flex;justify-content:space-between;gap:12px;padding:12px 14px;text-decoration:none;color:var(--granat);font:500 15.5px/1.3 Jost,Inter,sans-serif;border-top:1px solid var(--linia)}
+details.wybor>div a:first-child{border-top:0}
+details.wybor>div a:hover{background:var(--szary);color:var(--nieb)}
+details.wybor>div a span{color:var(--fuksja)}
+@media (max-width:1000px){.obszary{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.obszary{grid-template-columns:1fr}.obsz{padding:18px}}
+.przyg{background:#fff;border-radius:18px;padding:clamp(18px,3vw,28px);border:1px solid var(--linia)}
+.przyg h3{font-size:clamp(18px,1.8vw,21px);margin-bottom:14px}
+.przyg .btns{flex-direction:column;align-items:stretch}
+/* profile, o nas */
+.profil .bio{margin:0 0 12px;font-size:15.5px;color:#E6EEF7}
+.profil .bio a{color:#fff}
+.podpis{margin-top:18px;color:var(--tekst2)}.podpis b{display:block;font:600 19px Jost,Inter,sans-serif;color:var(--granat)}
+/* wyróżnienia */
+.wyr{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start}
+.wyr-lista{margin:16px 0;padding-left:20px}.wyr-lista li{margin-bottom:10px}
+.wyr .koniec{font:500 17px/1.5 Jost,Inter,sans-serif;color:var(--granat)}
+.znaki{display:grid;gap:14px}
+.znak{display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;align-items:center;background:#fff;border:1px solid var(--linia);border-radius:var(--r);padding:12px}
+.znak .ph{min-height:0;padding:8px;font-size:12px}
+.znak b{display:block;font:600 17px/1.3 Jost,Inter,sans-serif;color:var(--granat)}
+.znak .kod{display:block;font-weight:600;color:var(--fuksja);margin:2px 0}
+.znak span{font-size:14.5px;color:var(--tekst2)}
+@media (max-width:860px){.wyr{grid-template-columns:1fr}}
+/* diagnostyka i wkładki */
+.wsk{padding-left:20px}.wsk li{margin-bottom:10px}
+.etapy.e3{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:34px}
+.etapy.e4{grid-template-columns:repeat(4,minmax(0,1fr));row-gap:34px}
+.etapy.e3 div,.etapy.e4 div{padding-right:22px}
+@media (max-width:900px){.etapy.e3,.etapy.e4{grid-template-columns:1fr;row-gap:0}}
+.pietra{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.pietra div{background:var(--szary);border-radius:12px;padding:18px}
+.pietra h3{font-size:17px}.pietra p{font-size:14.5px;color:var(--tekst2);margin:0}
+@media (max-width:1000px){.pietra{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.pietra{grid-template-columns:1fr}}
+.porown{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:stretch}
+.por.nasz{grid-column:1/-1;padding:clamp(20px,3vw,32px)}.por.nasz h3{font-size:clamp(19px,2vw,23px)}
+.por.nasz ul{columns:2;column-gap:40px}.por.nasz li{break-inside:avoid}
+@media (max-width:860px){.por.nasz ul{columns:1}}
+.por{background:#fff;border:1px solid var(--linia);border-radius:var(--r);padding:20px}
+.por h3{font-size:17.5px;margin-bottom:12px}
+.por ul{margin:0;padding-left:18px;font-size:14.5px;color:var(--tekst2)}.por li{margin-bottom:9px}
+.por li b{color:var(--granat)}
+.por.nasz{background:var(--granat);border-color:var(--granat);color:#D3DFEE}
+.por.nasz h3,.por.nasz li b{color:#fff}.por.nasz ul{color:#D3DFEE}
+@media (max-width:1000px){.porown{grid-template-columns:1fr}}
+@media (max-width:640px){.porown{grid-template-columns:1fr}}
+/* sklep: kod rabatowy */
+.kod{margin:0 0 14px}
+.kod label{display:block;font-size:14px;font-weight:600;color:var(--granat);margin-bottom:6px}
+.kod div{display:flex;gap:8px}
+.kod input{flex:1;min-width:0;font:16px Inter,sans-serif;padding:10px 12px;border:1px solid #B9C8D9;border-radius:10px;text-transform:uppercase}
+.kod .btn{min-height:44px;padding:8px 14px}
+.kod-msg{font-size:13.5px;color:var(--tekst2);margin:6px 0 0;min-height:1em}
+.koszyk .rabat{display:flex;justify-content:space-between;font-size:14.5px;color:var(--fuksja);margin-top:8px}
+/* mapa gabinetu */
+.mapa{border-radius:var(--r);overflow:hidden;border:1px solid var(--linia);aspect-ratio:4/3;background:var(--szary)}
+.mapa iframe{display:block;width:100%;height:100%;border:0}
+
+.sz .info3>div{background:#fff}
+details.wybor summary.btn.o:hover,details.wybor[open] summary.btn.o{background:var(--granat);color:#fff;border-color:var(--granat)}
 <style>
 .wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
 .wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
@@ -403,7 +487,7 @@ details.cen-poz>summary .c{grid-row:auto;white-space:nowrap}
 @media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
 </style>
 </style></head><body>
-<div class="mk">Makieta układu strony. Pola w paski to miejsca na nowe zdjęcia, teksty oznaczone na żółto są do uzupełnienia.</div>
+<div class="mk">Wersja robocza strony. Pola w paski to miejsca na zdjęcia, teksty oznaczone na żółto są do uzupełnienia.</div>
 <div class="top"><div class="w"><div class="tel"><a href="tel:+48503100341"><span>Podologia i dietetyka: </span>503 100 341</a><a href="tel:+48500138088"><span>Diagnostyka i wkładki: </span>500 138 088</a></div>
 <div class="dod"><a href="../../sklep/">Sklep</a><a href="../../blog/">Blog</a><a href="mailto:kontakt@plantaris.pl">kontakt@plantaris.pl</a></div></div></div>
 <header class="hdr"><div class="w"><a class="logo" href="../../" aria-label="PLANTARIS, strona główna"><img src="../../logo.png" width="400" height="120" alt="PLANTARIS diagnostyka i terapia stóp"></a>
@@ -417,7 +501,7 @@ details.cen-poz>summary .c{grid-row:auto;white-space:nowrap}
 <h2>Czas, miejsce, materiały</h2><p><span class="uz">[czas trwania, adres sali lub platforma online, materiały w cenie]</span></p>
 <h2>Zasady zapisu</h2><p>Zgłoszenie przez koszyk. Płatność przelewem w ciągu 7 dni od zgłoszenia, dane do przelewu przychodzą w potwierdzeniu. Rezygnacja: <span class="uz">[zasady]</span>.</p>
 <p><a href="../../sklep/">Powiązane e-booki w sklepie</a></p></div>
-<aside id="zapis"><div class="boks"><h3>Terminy</h3><div class="poz"><span>5 marca 2027<small>brak miejsc</small></span><b>690 zł</b></div><a class="btn" href="../../sklep/?szkolenie=mikrobiom">Zgłoś uczestnika</a><p class="alt"><a href="../../szkolenia/#zapytaj">Powiadom mnie o terminie</a></p><p class="alt">Terminy i ceny w makiecie są przykładowe.</p></div></aside></div></section></main>
+<aside id="zapis"><div class="boks"><h3>Terminy</h3><div class="poz"><span>5 marca 2027<small>brak miejsc</small></span><b>690 zł</b></div><a class="btn" href="../../sklep/?szkolenie=mikrobiom">Zgłoś uczestnika</a><p class="alt"><a href="../../szkolenia/#zapytaj">Powiadom mnie o terminie</a></p><p class="alt">Terminy i ceny są przykładowe.</p></div></aside></div></section></main>
 <footer class="stopka"><div class="w">
 <div><img src="../../logo.png" width="180" height="54" alt="PLANTARIS" style="background:#fff;border-radius:8px;padding:6px 8px;margin-bottom:12px"><p>Podologia, diagnostyka stóp, wkładki ortopedyczne i dietetyka kliniczna w Tychach i w Woli. Wizyty po wcześniejszym umówieniu.</p></div>
 <div><h4>Gabinety</h4><ul><li><a href="../../gabinet-tychy/">PLANTARIS Tychy</a><br>ul. Gabrieli Zapolskiej 65B, 43-100 Tychy</li><li style="margin-top:8px"><a href="../../gabinet-wola/">PLANTARIS Wola</a><br>ul. Lipowa 7a, 43-225 Wola</li></ul></div>
