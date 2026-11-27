@@ -474,6 +474,51 @@ details.wybor>div a span{color:var(--fuksja)}
 
 .sz .info3>div{background:#fff}
 details.wybor summary.btn.o:hover,details.wybor[open] summary.btn.o{background:var(--granat);color:#fff;border-color:var(--granat)}
+/* zdjęcia (27.11) */
+.fo{position:relative;overflow:hidden;border-radius:var(--r);background:var(--jasny)}
+.fo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.r34{aspect-ratio:3/4}
+.kafel .fo,.gab .fo{border-radius:0}
+.kafel.zk .fo+.ikona{position:relative;z-index:1;flex:none;margin:-34px 0 0 14px;width:64px;height:64px;border-radius:50%;border:3px solid #fff;box-shadow:0 4px 14px rgba(12,39,64,.18);background:#fff}
+.kafel.zk{position:relative}
+.kafel.zk .fo+.ikona .ik{width:46px;height:46px}
+.kafel.zk .fo+.ikona+.tr{padding-top:10px}
+.hero .fo.tlo{position:absolute;inset:0;border-radius:0}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,39,64,.94) 0%,rgba(12,39,64,.82) 38%,rgba(12,39,64,.25) 75%,rgba(12,39,64,.1) 100%);pointer-events:none}
+.hero .w{z-index:1}
+@media (max-width:860px){.hero::after{background:linear-gradient(180deg,rgba(12,39,64,.55) 0%,rgba(12,39,64,.85) 50%,rgba(12,39,64,.95) 100%)}}
+.ph-head .fo{box-shadow:0 18px 40px rgba(0,0,0,.25)}
+.profil .fo{border-radius:14px}
+.etapy div .fo{margin:0 0 14px;border-radius:10px}
+.etapy div:has(.fo)::before{top:-9px}
+@media (max-width:900px){.etapy div .fo{max-width:420px}}
+.ind{align-items:center}.ind .przyg{margin-top:22px}
+.ind>.fo{max-width:460px;justify-self:end;width:100%}
+@media (max-width:860px){.ind>.fo{justify-self:stretch;max-width:none;aspect-ratio:4/3}}
+.usg{grid-template-columns:120px minmax(0,1fr) auto}
+.usg .fo{width:120px}
+@media (max-width:760px){.usg{grid-template-columns:1fr}.usg .fo{width:100%;max-width:280px;aspect-ratio:16/10}}
+.lg{background:#fff;border:1px solid var(--linia);border-style:solid}
+.lg img{max-width:100%;max-height:56px;width:auto;height:auto;object-fit:contain}
+.op figure .listek{display:block;width:34px;height:34px;margin-bottom:10px}
+.certy{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px;margin-top:32px}
+.cert{display:flex;flex-direction:column;gap:8px;text-decoration:none;color:var(--tekst2);font-size:13px;line-height:1.35}
+.cert .fo{background:#fff;border:1px solid var(--linia);border-radius:10px}
+.cert .fo img{object-fit:contain;padding:6px}
+.cert:hover .fo{border-color:var(--nieb)}
+@media (max-width:1000px){.certy{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:560px){.certy{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.znak .fo{border-radius:50%;background:#0b0b0b}
+.news{background:var(--granat);color:#D3DFEE}
+.nl{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:clamp(18px,3vw,40px);align-items:center}
+.nl>img{filter:brightness(0) invert(1);opacity:.9}
+.nl h2{color:#fff;margin-bottom:4px}.nl .rabat{font:600 19px Jost,Inter,sans-serif;color:var(--blekit);margin:0 0 8px}.nl p{margin:0 0 6px}
+.nl-f{display:flex;flex-wrap:wrap;gap:10px}.nl-f input[type=email]{flex:1 1 220px;min-height:48px;border-radius:10px;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.08);color:#fff;padding:0 14px;font:16px Inter,sans-serif}
+.nl-f input::placeholder{color:#9FB6D2}.nl-f .zgoda{flex-basis:100%;font-size:13.5px;color:#C9D7E8;display:flex;gap:8px;align-items:flex-start}
+.nl .msg{grid-column:3}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media (max-width:900px){.nl{grid-template-columns:1fr}.nl .msg{grid-column:1}}
+.rez .fo{margin-bottom:4px}
 <style>
 .wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
 .wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
@@ -487,7 +532,7 @@ details.wybor summary.btn.o:hover,details.wybor[open] summary.btn.o{background:v
 @media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
 </style>
 </style></head><body>
-<div class="mk">Wersja robocza strony. Pola w paski to miejsca na zdjęcia, teksty oznaczone na żółto są do uzupełnienia.</div>
+<div class="mk">Wersja robocza strony. Pola w paski to miejsca na brakujące zdjęcia, teksty oznaczone na żółto są do uzupełnienia.</div>
 <div class="top"><div class="w"><div class="tel"><a href="tel:+48503100341"><span>Podologia i dietetyka: </span>503 100 341</a><a href="tel:+48500138088"><span>Diagnostyka i wkładki: </span>500 138 088</a></div>
 <div class="dod"><a href="../sklep/">Sklep</a><a href="../blog/">Blog</a><a href="mailto:kontakt@plantaris.pl">kontakt@plantaris.pl</a></div></div></div>
 <header class="hdr"><div class="w"><a class="logo" href="../" aria-label="PLANTARIS, strona główna"><img src="../logo.png" width="400" height="120" alt="PLANTARIS diagnostyka i terapia stóp"></a>
@@ -495,8 +540,8 @@ details.wybor summary.btn.o:hover,details.wybor[open] summary.btn.o{background:v
 <a class="btn wiz" href="../umow-wizyte/">Umów wizytę</a>
 <button class="burger" type="button" data-burger aria-controls="menu" aria-expanded="false" aria-label="Otwórz menu"><span></span></button></div></header>
 <main><section class="ph-head"><div class="w" style="display:block;padding:0"><nav class="okr" aria-label="Jesteś tutaj"><a href="../">Strona główna</a> / Strefa pacjenta</nav></div>
-<div class="w"><div><h1>Strefa pacjenta</h1><p class="lead">Proste odpowiedzi przed wizytą: co zabrać, jak się przygotować, o co zapytamy i czego się spodziewać.</p><div class="btns"><a class="btn " href="../umow-wizyte/">Umów wizytę</a></div></div><div class="ph r32 c" role="img" aria-label="Miejsce na zdjęcie: pacjent w poczekalni lub przy rejestracji"><div><b>tu zdjęcie</b>pacjent w poczekalni lub przy rejestracji</div></div></div></section>
-<section class="sek"><div class="w"><div class="siatka k4"><a class="kafel" href="../strefa-pacjenta/pierwsza-wizyta/"><div class="ph r32" role="img" aria-label="Miejsce na zdjęcie: Pierwsza wizyta"><div><b>tu zdjęcie</b>Pierwsza wizyta</div></div><div class="tr"><h3>Pierwsza wizyta</h3><p>Co zabrać, jak się przygotować, czego oczekiwać.</p><span class="wiecej">Czytaj</span></div></a><a class="kafel" href="../strefa-pacjenta/konsultacja-i-wywiad/"><div class="ph r32" role="img" aria-label="Miejsce na zdjęcie: Konsultacja i wywiad"><div><b>tu zdjęcie</b>Konsultacja i wywiad</div></div><div class="tr"><h3>Konsultacja i wywiad</h3><p>O co będziemy pytać i jak wygląda konsultacja.</p><span class="wiecej">Czytaj</span></div></a><a class="kafel" href="../diagnostyka-stop/#przygotowanie"><div class="ph r32" role="img" aria-label="Miejsce na zdjęcie: Przygotowanie do diagnostyki"><div><b>tu zdjęcie</b>Przygotowanie do diagnostyki</div></div><div class="tr"><h3>Przygotowanie do diagnostyki</h3><p>Obuwie, dokumenty, strój na badanie stóp.</p><span class="wiecej">Czytaj</span></div></a><a class="kafel" href="../strefa-pacjenta/badanie-mykologiczne/"><div class="ph r32" role="img" aria-label="Miejsce na zdjęcie: Badanie mykologiczne"><div><b>tu zdjęcie</b>Badanie mykologiczne</div></div><div class="tr"><h3>Badanie mykologiczne</h3><p>Przebieg i przygotowanie zgodne z zaleceniami laboratorium.</p><span class="wiecej">Czytaj</span></div></a><a class="kafel" href="../zabiegi/podologia-dziecieca/"><div class="ph r32" role="img" aria-label="Miejsce na zdjęcie: Opieka nad stopami dziecka"><div><b>tu zdjęcie</b>Opieka nad stopami dziecka</div></div><div class="tr"><h3>Opieka nad stopami dziecka</h3><p>Badanie, profilaktyka, wkładki i kinesiotaping dla dzieci.</p><span class="wiecej">Czytaj</span></div></a><a class="kafel" href="../zabiegi/stopa-cukrzycowa-i-seniorzy/"><div class="ph r32" role="img" aria-label="Miejsce na zdjęcie: Opieka nad stopami seniora"><div><b>tu zdjęcie</b>Opieka nad stopami seniora</div></div><div class="tr"><h3>Opieka nad stopami seniora</h3><p>Bezpieczna pielęgnacja, stopa cukrzycowa, wizyty domowe.</p><span class="wiecej">Czytaj</span></div></a><a class="kafel" href="../strefa-pacjenta/dokumenty/"><div class="ph r32" role="img" aria-label="Miejsce na zdjęcie: Dokumenty do pobrania"><div><b>tu zdjęcie</b>Dokumenty do pobrania</div></div><div class="tr"><h3>Dokumenty do pobrania</h3><p>Karta rejestracji, zgody, bezpłatne poradniki PDF.</p><span class="wiecej">Czytaj</span></div></a><a class="kafel" href="../strefa-pacjenta/regulamin-i-rodo/"><div class="ph r32" role="img" aria-label="Miejsce na zdjęcie: Regulamin i polityka RODO"><div><b>tu zdjęcie</b>Regulamin i polityka RODO</div></div><div class="tr"><h3>Regulamin i polityka RODO</h3><p>Regulamin gabinetu i zasady przetwarzania danych osobowych.</p><span class="wiecej">Czytaj</span></div></a></div></div></section>
+<div class="w"><div><h1>Strefa pacjenta</h1><p class="lead">Proste odpowiedzi przed wizytą: co zabrać, jak się przygotować, o co zapytamy i czego się spodziewać.</p><div class="btns"><a class="btn " href="../umow-wizyte/">Umów wizytę</a></div></div><div class="fo r32"><img src="../img/podolog.webp" srcset="../img/podolog-480.webp 480w, ../img/podolog-800.webp 800w, ../img/podolog.webp 1024w" sizes="(max-width:860px) 100vw, 40vw" width="1024" height="1535" alt="Zabieg frezarką podologiczną" fetchpriority=high></div></div></section>
+<section class="sek"><div class="w"><div class="siatka k4"><a class="kafel" href="../strefa-pacjenta/pierwsza-wizyta/"><div class="fo r32"><img src="../img/konsultacja2.webp" srcset="../img/konsultacja2-480.webp 480w, ../img/konsultacja2-800.webp 800w, ../img/konsultacja2.webp 948w" sizes="(max-width:640px) 100vw, 25vw" width="948" height="690" alt="Pierwsza wizyta" loading=lazy decoding=async></div><div class="tr"><h3>Pierwsza wizyta</h3><p>Co zabrać, jak się przygotować, czego oczekiwać.</p><span class="wiecej">Czytaj</span></div></a><a class="kafel" href="../strefa-pacjenta/konsultacja-i-wywiad/"><div class="fo r32"><img src="../img/konsultacja.webp" srcset="../img/konsultacja-480.webp 480w, ../img/konsultacja-800.webp 800w, ../img/konsultacja-1200.webp 1200w, ../img/konsultacja.webp 1535w" sizes="(max-width:640px) 100vw, 25vw" width="1535" height="1024" alt="Konsultacja i wywiad" loading=lazy decoding=async></div><div class="tr"><h3>Konsultacja i wywiad</h3><p>O co będziemy pytać i jak wygląda konsultacja.</p><span class="wiecej">Czytaj</span></div></a><a class="kafel" href="../diagnostyka-stop/#przygotowanie"><div class="fo r32"><img src="../img/k-diagnostyka.webp" srcset="../img/k-diagnostyka-480.webp 480w, ../img/k-diagnostyka-800.webp 800w, ../img/k-diagnostyka-1200.webp 1200w, ../img/k-diagnostyka.webp 1535w" sizes="(max-width:640px) 100vw, 25vw" width="1535" height="1025" alt="Przygotowanie do diagnostyki" loading=lazy decoding=async></div><div class="tr"><h3>Przygotowanie do diagnostyki</h3><p>Obuwie, dokumenty, strój na badanie stóp.</p><span class="wiecej">Czytaj</span></div></a><a class="kafel" href="../strefa-pacjenta/badanie-mykologiczne/"><div class="fo r32"><img src="../img/mykologia2.webp" srcset="../img/mykologia2-480.webp 480w, ../img/mykologia2-800.webp 800w, ../img/mykologia2-1200.webp 1200w, ../img/mykologia2.webp 1448w" sizes="(max-width:640px) 100vw, 25vw" width="1448" height="1086" alt="Badanie mykologiczne" loading=lazy decoding=async></div><div class="tr"><h3>Badanie mykologiczne</h3><p>Przebieg i przygotowanie zgodne z zaleceniami laboratorium.</p><span class="wiecej">Czytaj</span></div></a><a class="kafel" href="../zabiegi/podologia-dziecieca/"><div class="fo r32"><img src="../img/dziecko2.webp" srcset="../img/dziecko2-480.webp 480w, ../img/dziecko2-800.webp 800w, ../img/dziecko2.webp 1080w" sizes="(max-width:640px) 100vw, 25vw" width="1080" height="717" alt="Opieka nad stopami dziecka" loading=lazy decoding=async></div><div class="tr"><h3>Opieka nad stopami dziecka</h3><p>Badanie, profilaktyka, wkładki i kinesiotaping dla dzieci.</p><span class="wiecej">Czytaj</span></div></a><a class="kafel" href="../zabiegi/stopa-cukrzycowa-i-seniorzy/"><div class="fo r32"><img src="../img/senior2.webp" srcset="../img/senior2-480.webp 480w, ../img/senior2-800.webp 800w, ../img/senior2.webp 1080w" sizes="(max-width:640px) 100vw, 25vw" width="1080" height="710" alt="Opieka nad stopami seniora" loading=lazy decoding=async></div><div class="tr"><h3>Opieka nad stopami seniora</h3><p>Bezpieczna pielęgnacja, stopa cukrzycowa, wizyty domowe.</p><span class="wiecej">Czytaj</span></div></a><a class="kafel" href="../strefa-pacjenta/dokumenty/"><div class="fo r32"><img src="../img/biurowa.webp" srcset="../img/biurowa-480.webp 480w, ../img/biurowa-800.webp 800w, ../img/biurowa-1200.webp 1200w, ../img/biurowa.webp 1535w" sizes="(max-width:640px) 100vw, 25vw" width="1535" height="1024" alt="Dokumenty do pobrania" loading=lazy decoding=async></div><div class="tr"><h3>Dokumenty do pobrania</h3><p>Karta rejestracji, zgody, bezpłatne poradniki PDF.</p><span class="wiecej">Czytaj</span></div></a><a class="kafel" href="../strefa-pacjenta/regulamin-i-rodo/"><div class="fo r32"><img src="../img/kontakt.webp" srcset="../img/kontakt-480.webp 480w, ../img/kontakt-800.webp 800w, ../img/kontakt-1200.webp 1200w, ../img/kontakt.webp 1535w" sizes="(max-width:640px) 100vw, 25vw" width="1535" height="1024" alt="Regulamin i polityka RODO" loading=lazy decoding=async></div><div class="tr"><h3>Regulamin i polityka RODO</h3><p>Regulamin gabinetu i zasady przetwarzania danych osobowych.</p><span class="wiecej">Czytaj</span></div></a></div></div></section>
 <section class="sek sz"><div class="w dwa"><div><h2>Formularze przed wizytą</h2><p>Karta pacjenta do wypełnienia online przed wizytą oraz dokumenty do pobrania i wydrukowania.</p><div class="btns"><a class="btn n" href="../strefa-pacjenta/dokumenty/">Dokumenty i formularze</a></div></div>
 <div class="uwaga" style="margin:0">Dokumenty dotyczące zdrowia przesyła się osobnym formularzem, szyfrowanym połączeniem; zgłoszenia widać wyłącznie po zalogowaniu do panelu.</div></div></section></main>
 <footer class="stopka"><div class="w">
